@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:tradino_flutter/global/constant/colors.dart';
 
 import 'global/constant/routes.dart';
 
@@ -23,11 +24,11 @@ class App extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           getPages: Routes.pages,
           initialRoute: Routes.kSignup,
-          // theme: ThemeData(
-          //   scaffoldBackgroundColor: kWhite,
-          //   primaryColor: kBlack,
-          //   fontFamily: 'Roboto',
-          // ),
+          theme: ThemeData(
+            scaffoldBackgroundColor: kWhite,
+            primaryColor: kBlack,
+            // fontFamily: 'Roboto',
+          ),
         );
       },
     );
