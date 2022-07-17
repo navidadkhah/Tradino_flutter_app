@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tradino_flutter/global/constant/colors.dart';
-
 import 'global/constant/routes.dart';
 
 void main() {
@@ -18,7 +17,7 @@ class App extends StatelessWidget {
       designSize: const Size(320, 568),
       minTextAdapt: true,
       splitScreenMode: true,
-      builder: (BuildContext, child) {
+      builder: (_, child) {
         return GetMaterialApp(
           title: 'Tradiono App',
           debugShowCheckedModeBanner: false,
@@ -27,7 +26,6 @@ class App extends StatelessWidget {
           theme: ThemeData(
             scaffoldBackgroundColor: kWhiteGray,
             primaryColor: kGrayBlack,
-            // fontFamily: 'Roboto',
           ),
         );
       },

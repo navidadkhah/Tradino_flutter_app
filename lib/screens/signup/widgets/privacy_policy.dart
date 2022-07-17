@@ -32,8 +32,10 @@ class PrivacyPolicy extends StatelessWidget {
           style: TextButton.styleFrom(
             textStyle: kNormalBlue14,
           ),
-          onPressed:
-              null, // TODO: letter of privacy policy and with Getx.snackbar
+          onPressed: () {
+            print("privacy policy page");
+          },
+          // TODO: letter of privacy policy and with Getx.snackbar
           child: const Text(
             'privacy and policy',
             style: TextStyle(

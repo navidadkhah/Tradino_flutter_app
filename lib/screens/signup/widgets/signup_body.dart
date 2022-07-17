@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tradino_flutter/global/widgets/green_buttons.dart';
-import 'package:tradino_flutter/global/widgets/inputs..dart';
+import 'package:tradino_flutter/global/widgets/inputs.dart';
 import 'package:tradino_flutter/screens/signup/widgets/back_to_signin.dart';
 import 'package:tradino_flutter/screens/signup/widgets/privacy_policy.dart';
 import 'package:tradino_flutter/screens/signup/widgets/signup_page_name.dart';

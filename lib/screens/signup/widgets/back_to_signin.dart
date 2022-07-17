@@ -19,8 +19,10 @@ class BackToSignIn extends StatelessWidget {
           style: TextButton.styleFrom(
             textStyle: kNormalBlue14,
           ),
-          onPressed: null,
-          // Get.toNamed(page), TODO: back to signin
+          onPressed: () {
+            print("back to signin");
+          },
+          //TODO: back to signin
           child: const Text(
             'sign in',
             style: TextStyle(

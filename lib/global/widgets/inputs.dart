@@ -50,13 +50,18 @@ class Inputs extends StatelessWidget {
                       BoxShadow(
                         color: kBlackWithOp,
                         spreadRadius: 2.w,
-                        blurRadius: 14.w,
-                        offset: const Offset(0, 3),
+                        blurRadius: 8.w,
+                        offset: Offset(
+                          2.w,
+                          2.w,
+                        ),
                       ),
                     ],
                   ),
                   child: TextField(
-                    style: TextStyle(height: 0.6.w),
+                    style: TextStyle(
+                      height: 0.6.w,
+                    ),
                     keyboardType: title == "Email"
                         ? TextInputType.emailAddress
                         : TextInputType.name,

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tradino_flutter/global/constant/colors.dart';
 import 'package:tradino_flutter/global/constant/text_styles.dart';
@@ -27,38 +25,42 @@ class GreenButtons extends StatelessWidget {
             right: 28.w,
           ),
           child: Container(
-              width: .8.sw,
-              height: 44.w,
-              decoration: BoxDecoration(
-                boxShadow: [
-                  BoxShadow(
-                    color: kBlackWithOp,
-                    spreadRadius: 10.w,
-                    blurRadius: 14.w,
-                    offset: const Offset(0, 3),
+            width: .8.sw,
+            height: 44.w,
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: kBlackWithOp,
+                  spreadRadius: 2.w,
+                  blurRadius: 4.w,
+                  offset: Offset(
+                    2.w,
+                    2.w,
                   ),
-                ],
-                gradient: kGreenLinear,
-                borderRadius: BorderRadius.circular(
-                  20.w,
                 ),
+              ],
+              gradient: kGreenLinear,
+              borderRadius: BorderRadius.circular(
+                20.w,
               ),
-              child: ElevatedButton(
-                style: ButtonStyle(
-                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                    RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(
-                        20.w,
-                      ),
+            ),
+            child: ElevatedButton(
+              style: ButtonStyle(
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(
+                      20.w,
                     ),
                   ),
                 ),
-                onPressed: null,
-                child: Text(
-                  title,
-                  style: kGrayBlackBlack24,
-                ),
-              )),
+              ),
+              onPressed: null, // TODO: bind from backend
+              child: Text(
+                title,
+                style: kGrayBlackBlack24,
+              ),
+            ),
+          ),
         ),
       ],
     );
