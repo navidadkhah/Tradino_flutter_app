@@ -31,7 +31,7 @@ class Inputs extends StatelessWidget {
             children: [
               Padding(
                 padding: EdgeInsets.only(
-                  left: 28.w,
+                  left: 24.w,
                   bottom: 4.w,
                 ),
                 child: Text(
@@ -41,8 +41,8 @@ class Inputs extends StatelessWidget {
               ),
               Padding(
                 padding: EdgeInsets.only(
-                  left: 24.w,
-                  right: 36.w,
+                  left: 20.w,
+                  right: 28.w,
                 ),
                 child: Container(
                   decoration: BoxDecoration(

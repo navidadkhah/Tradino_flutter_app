@@ -23,16 +23,36 @@ class GreenButtons extends StatelessWidget {
         Padding(
           padding: EdgeInsets.only(
             top: top,
-            left: 24,
-            right: 36,
+            left: 20.w,
+            right: 28.w,
           ),
           child: Container(
               width: .8.sw,
               height: 44.w,
               decoration: BoxDecoration(
-                  //border:
+                boxShadow: [
+                  BoxShadow(
+                    color: kBlackWithOp,
+                    spreadRadius: 10.w,
+                    blurRadius: 14.w,
+                    offset: const Offset(0, 3),
                   ),
+                ],
+                gradient: kGreenLinear,
+                borderRadius: BorderRadius.circular(
+                  20.w,
+                ),
+              ),
               child: ElevatedButton(
+                style: ButtonStyle(
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(
+                        20.w,
+                      ),
+                    ),
+                  ),
+                ),
                 onPressed: null,
                 child: Text(
                   title,
