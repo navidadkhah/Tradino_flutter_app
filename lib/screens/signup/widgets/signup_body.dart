@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:tradino_flutter/global/constant/text_styles.dart';
 import 'package:tradino_flutter/global/widgets/inputs..dart';
+import 'package:tradino_flutter/screens/signup/widgets/privacy_policy.dart';
 import 'package:tradino_flutter/screens/signup/widgets/signup_page_name.dart';
 import '../../../global/constant/colors.dart';
 
@@ -40,6 +40,7 @@ class SignupBody extends StatelessWidget {
                 top: 0,
                 bottom: 19,
               ),
+              PrivacyPolicy(),
             ],
           ),
         ),

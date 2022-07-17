@@ -22,3 +22,17 @@ final kNormalBlack14 = TextStyle(
   fontSize: 14.sp,
   fontFamily: "OpenSans",
 );
+
+final kNormalGrayBlack14 = TextStyle(
+  fontWeight: FontWeight.w400,
+  color: kGrayBlack,
+  fontSize: 14.sp,
+  fontFamily: "OpenSans",
+);
+
+final kNormalBlue14 = TextStyle(
+  fontWeight: FontWeight.w400,
+  color: kBlue,
+  fontSize: 14.sp,
+  fontFamily: "OpenSans",
+);
