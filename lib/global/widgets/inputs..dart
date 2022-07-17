@@ -31,7 +31,7 @@ class Inputs extends StatelessWidget {
             children: [
               Padding(
                 padding: EdgeInsets.only(
-                  left: 29.w,
+                  left: 28.w,
                   bottom: 4.w,
                 ),
                 child: Text(
@@ -41,17 +41,17 @@ class Inputs extends StatelessWidget {
               ),
               Padding(
                 padding: EdgeInsets.only(
-                  left: 25.w,
-                  right: 35.w,
+                  left: 24.w,
+                  right: 36.w,
                 ),
                 child: Container(
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     boxShadow: [
                       BoxShadow(
-                        color: Color.fromRGBO(0, 0, 0, .1),
-                        spreadRadius: 3,
-                        blurRadius: 15,
-                        offset: Offset(0, 3),
+                        color: kBlackWithOp,
+                        spreadRadius: 2.w,
+                        blurRadius: 14.w,
+                        offset: const Offset(0, 3),
                       ),
                     ],
                   ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tradino_flutter/global/constant/colors.dart';
-import 'package:tradino_flutter/global/widgets/headers_tradino.dart';
+import 'package:tradino_flutter/global/widgets/header_tradino.dart';
 import 'package:tradino_flutter/screens/signup/widgets/signup_body.dart';
 
 class SignupScreen extends StatelessWidget {
@@ -15,7 +15,7 @@ class SignupScreen extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
+          children: const [
             Headers(),
             SignupBody(),
           ],
