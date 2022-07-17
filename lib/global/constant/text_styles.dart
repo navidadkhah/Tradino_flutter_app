@@ -9,9 +9,16 @@ final kSemiBoldLinear41 = TextStyle(
   fontFamily: "OpenSans",
 );
 
-final kSemiBoldBlack24 = TextStyle(
+final kGrayBlackBlack24 = TextStyle(
   fontWeight: FontWeight.w600,
-  color: kBlack,
+  color: kGrayBlack,
   fontSize: 24.sp,
+  fontFamily: "OpenSans",
+);
+
+final kNormalBlack14 = TextStyle(
+  fontWeight: FontWeight.w400,
+  color: kBlack,
+  fontSize: 14.sp,
   fontFamily: "OpenSans",
 );
