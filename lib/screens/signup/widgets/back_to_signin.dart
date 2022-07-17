@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
+
 import 'package:tradino_flutter/global/constant/colors.dart';
 import 'package:tradino_flutter/global/constant/text_styles.dart';
 
@@ -12,13 +11,16 @@ class BackToSignIn extends StatelessWidget {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Text("Already have an account?"),
+        Text(
+          "Already have an account?",
+          style: kNormalBlack14,
+        ),
         TextButton(
           style: TextButton.styleFrom(
             textStyle: kNormalBlue14,
           ),
           onPressed: null,
-          // Get.toNamed(page),
+          // Get.toNamed(page), TODO: back to signin
           child: const Text(
             'sign in',
             style: TextStyle(
