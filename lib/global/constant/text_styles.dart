@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 final kSemiBoldLinear41 = TextStyle(
   fontWeight: FontWeight.w600,
   foreground: Paint()..shader = linearGradient,
-  fontSize: 41.sp,
+  fontSize: 40.sp,
   fontFamily: "OpenSans",
 );
 
@@ -34,5 +34,12 @@ final kNormalBlue14 = TextStyle(
   fontWeight: FontWeight.w400,
   color: kBlue,
   fontSize: 14.sp,
+  fontFamily: "OpenSans",
+);
+
+final kNormalGrayBlack36 = TextStyle(
+  fontWeight: FontWeight.w400,
+  color: kGrayBlack,
+  fontSize: 36.sp,
   fontFamily: "OpenSans",
 );

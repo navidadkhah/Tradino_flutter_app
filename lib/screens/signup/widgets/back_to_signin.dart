@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 import 'package:tradino_flutter/global/constant/colors.dart';
 import 'package:tradino_flutter/global/constant/text_styles.dart';
@@ -21,9 +22,8 @@ class BackToSignIn extends StatelessWidget {
             textStyle: kNormalBlue14,
           ),
           onPressed: () {
-            print("back to signin");
+            Get.offAllNamed("/login");
           },
-          //TODO: back to signin
           child: const Text(
             'sign in',
             style: TextStyle(
