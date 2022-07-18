@@ -60,6 +60,7 @@ class Inputs extends StatelessWidget {
                   ),
                   child: TextField(
                     style: TextStyle(
+                      letterSpacing: .5.sp,
                       height: 0.6.w,
                     ),
                     keyboardType: title == "Email"
