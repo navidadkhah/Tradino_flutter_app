@@ -21,8 +21,8 @@ class Inputs extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.only(
-            top: top.w,
-            bottom: bottom.w,
+            top: top.h,
+            bottom: bottom.h,
           ),
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -32,7 +32,7 @@ class Inputs extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(
                   left: 24.w,
-                  bottom: 4.w,
+                  bottom: 4.h,
                 ),
                 child: Text(
                   title,
@@ -45,6 +45,7 @@ class Inputs extends StatelessWidget {
                   right: 28.w,
                 ),
                 child: Container(
+                  height: 36.h,
                   decoration: BoxDecoration(
                     boxShadow: [
                       BoxShadow(
@@ -61,7 +62,7 @@ class Inputs extends StatelessWidget {
                   child: TextField(
                     style: TextStyle(
                       letterSpacing: .5.sp,
-                      height: 0.6.w,
+                      height: 0.6.h,
                     ),
                     keyboardType: title == "Email"
                         ? TextInputType.emailAddress

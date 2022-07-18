@@ -9,7 +9,7 @@ class SignupPageName extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-        top: 26.w,
+        top: 16.w,
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,

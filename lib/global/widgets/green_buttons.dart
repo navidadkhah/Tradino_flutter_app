@@ -20,13 +20,13 @@ class GreenButtons extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.only(
-            top: top,
+            top: top.h,
             left: 20.w,
             right: 28.w,
           ),
           child: Container(
             width: .8.sw,
-            height: 44.w,
+            height: 44.h,
             decoration: BoxDecoration(
               boxShadow: [
                 BoxShadow(

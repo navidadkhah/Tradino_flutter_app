@@ -18,8 +18,12 @@ class SignupBody extends StatelessWidget {
         decoration: BoxDecoration(
           color: kWhiteGray,
           borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(40.w),
-            topRight: Radius.circular(40.w),
+            topLeft: Radius.circular(
+              40.w,
+            ),
+            topRight: Radius.circular(
+              40.w,
+            ),
           ),
         ),
         child: SingleChildScrollView(
@@ -29,7 +33,7 @@ class SignupBody extends StatelessWidget {
               SignupPageName(),
               Inputs(
                 title: "Username",
-                top: 28,
+                top: 24,
                 bottom: 16,
               ),
               Inputs(

@@ -8,7 +8,7 @@ class PrivacyPolicy extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bool valuefirst = false;
+    bool valuefirst = false;
 
     return Row(
       children: [
