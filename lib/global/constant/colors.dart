@@ -8,6 +8,7 @@ const KDarkGreen = Color.fromRGBO(148, 255, 166, 1);
 const kBlack = Color.fromRGBO(0, 0, 0, 1);
 const kBlackWithOp = Color.fromRGBO(0, 0, 0, .1);
 const kBlue = Color.fromRGBO(61, 96, 220, 1);
+const kGray = Color.fromRGBO(147, 149, 152, 1);
 final Shader linearGradient = const LinearGradient(
   colors: <Color>[KLightGreen, KDarkGreen],
   begin: Alignment.centerLeft,
@@ -20,5 +21,14 @@ const kGreenLinear = LinearGradient(
   colors: [
     KLightGreen,
     KDarkGreen,
+  ],
+);
+
+const kWhiteLinear = LinearGradient(
+  begin: Alignment.centerLeft,
+  end: Alignment.centerRight,
+  colors: [
+    Color.fromRGBO(255, 255, 255, 1),
+    Color.fromRGBO(255, 255, 255, 0),
   ],
 );

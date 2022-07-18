@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tradino_flutter/global/constant/colors.dart';
-import 'package:tradino_flutter/global/constant/text_styles.dart';
+import 'package:tradino_flutter/global/widgets/green_buttons.dart';
 import 'package:tradino_flutter/global/widgets/inputs.dart';
+import 'package:tradino_flutter/screens/login/widgets/google_login.dart';
+import 'package:tradino_flutter/screens/login/widgets/login_divider.dart';
 import 'package:tradino_flutter/screens/login/widgets/login_forgot_password.dart';
 import 'package:tradino_flutter/screens/login/widgets/login_page_name.dart';
 
@@ -38,9 +40,15 @@ class LoginBody extends StatelessWidget {
               Inputs(
                 title: "Password",
                 top: 0,
-                bottom: 20,
+                bottom: 16,
               ),
               LoginForgotPassword(),
+              GreenButtons(
+                title: "Login",
+                top: 8,
+              ),
+              LoginDivider(),
+              GoogleLogin(),
             ],
           ),
         ),
