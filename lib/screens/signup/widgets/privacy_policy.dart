@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:get/state_manager.dart';
 import 'package:tradino_flutter/global/constant/colors.dart';
 import 'package:tradino_flutter/global/constant/text_styles.dart';
 import 'package:tradino_flutter/screens/signup/signup_controller.dart';
@@ -24,9 +23,8 @@ class PrivacyPolicy extends StatelessWidget {
               final isActive = controller.checkedbutton.value;
 
               return Checkbox(
-                checkColor: Colors.greenAccent,
+                checkColor: kGrayBlack,
                 activeColor: KDarkGreen,
-                focusColor: kBlack,
                 value: isActive,
                 onChanged: (args) {
                   controller.changeValue();
