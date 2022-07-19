@@ -44,7 +44,7 @@ class PrivacyPolicy extends StatelessWidget {
             textStyle: kNormalBlue14,
           ),
           onPressed: () {
-            print("privacy policy page");
+            Get.toNamed("/privacy");
           },
           // TODO: letter of privacy policy and with Getx.snackbar
           child: const Text(
