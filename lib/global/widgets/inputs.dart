@@ -52,10 +52,7 @@ class Inputs extends StatelessWidget {
                         color: kBlackWithOp,
                         spreadRadius: 2.w,
                         blurRadius: 8.w,
-                        offset: Offset(
-                          2.w,
-                          2.w,
-                        ),
+                        offset: Offset(2.w, 2.w),
                       ),
                     ],
                   ),
