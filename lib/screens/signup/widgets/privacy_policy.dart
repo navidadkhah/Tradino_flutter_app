@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:get/state_manager.dart';
 import 'package:tradino_flutter/global/constant/colors.dart';
 import 'package:tradino_flutter/global/constant/text_styles.dart';
+import 'package:tradino_flutter/screens/signup/signup_controller.dart';
 
 class PrivacyPolicy extends StatelessWidget {
   const PrivacyPolicy({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    bool valuefirst = false;
+    final SignupController controller = Get.put(SignupController());
 
     return Row(
       children: [
@@ -16,12 +19,20 @@ class PrivacyPolicy extends StatelessWidget {
           padding: EdgeInsets.only(
             left: 16.w,
           ),
-          child: Checkbox(
-            checkColor: Colors.greenAccent,
-            activeColor: KDarkGreen,
-            focusColor: kWhite,
-            value: valuefirst,
-            onChanged: (args) {},
+          child: Obx(
+            () {
+              final isActive = controller.checkedbutton.value;
+
+              return Checkbox(
+                checkColor: Colors.greenAccent,
+                activeColor: KDarkGreen,
+                focusColor: kBlack,
+                value: isActive,
+                onChanged: (args) {
+                  controller.changeValue();
+                },
+              );
+            },
           ),
         ),
         Text(
