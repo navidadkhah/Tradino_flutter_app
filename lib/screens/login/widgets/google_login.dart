@@ -32,8 +32,8 @@ class GoogleLogin extends StatelessWidget {
                   ),
                 ),
               ],
-              //color: kWhiteGray,
-              gradient: kWhiteLinear,
+              color: kWhite,
+              //gradient: kWhiteLinear,
               borderRadius: BorderRadius.circular(
                 10.w,
               ),
