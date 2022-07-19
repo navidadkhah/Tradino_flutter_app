@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// TODO: change colors to HEX and use color-name.com to name them
 const kWhiteGray = Color.fromRGBO(246, 246, 246, 1);
 const kWhite = Color.fromRGBO(255, 255, 255, 1);
 const kGrayBlack = Color.fromRGBO(49, 61, 76, 1);

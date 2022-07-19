@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tradino_flutter/global/constant/colors.dart';
-import 'package:tradino_flutter/global/widgets/header_tradino.dart';
-import 'package:tradino_flutter/screens/signup/widgets/signup_body.dart';
+import 'package:tradino_flutter/global/widgets/tradino_header_widget.dart';
+import 'package:tradino_flutter/screens/signup/widgets/signup_body_widget.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({Key? key}) : super(key: key);
@@ -16,8 +16,8 @@ class SignupScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: const [
-            Headers(),
-            SignupBody(),
+            TradinoHeaderWidget(),
+            SignupBodyWidget(),
           ],
         ),
       ),

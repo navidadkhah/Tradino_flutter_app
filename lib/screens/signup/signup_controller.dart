@@ -1,9 +1,22 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class SignupController extends GetxController {
-  var checkedbutton = false.obs;
+  late final TextEditingController usernameTextController;
+  late final TextEditingController emailTextController;
+  late final TextEditingController passwordTextController;
 
-  changeValue() {
-    checkedbutton.toggle();
+  var isPrivacyAccepted = false.obs;
+
+  @override
+  void onInit() {
+    usernameTextController = TextEditingController();
+    emailTextController = TextEditingController();
+    passwordTextController = TextEditingController();
+    super.onInit();
+  }
+
+  togglePrivacyAccepted() {
+    isPrivacyAccepted.toggle();
   }
 }

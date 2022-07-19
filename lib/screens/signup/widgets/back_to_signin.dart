@@ -1,34 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-import 'package:tradino_flutter/global/constant/colors.dart';
 import 'package:tradino_flutter/global/constant/text_styles.dart';
 
-class BackToSignIn extends StatelessWidget {
-  const BackToSignIn({Key? key}) : super(key: key);
+class BackToSignInWidget extends StatelessWidget {
+  const BackToSignInWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       mainAxisSize: MainAxisSize.min,
       children: [
         Text(
-          "Already have an account?",
+          "Already have an account? ",
           style: kNormalBlack14,
         ),
-        TextButton(
-          style: TextButton.styleFrom(
-            textStyle: kNormalBlue14,
-          ),
-          onPressed: () {
+        GestureDetector(
+          onTap: () {
             Get.toNamed("/login");
           },
-          child: const Text(
+          child: Text(
             'sign in',
-            style: TextStyle(
-              color: kBlue,
-            ),
+            style: kNormalBlue14,
           ),
         ),
       ],
