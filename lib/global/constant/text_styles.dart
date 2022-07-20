@@ -11,7 +11,7 @@ final kSemiBoldLinear41 = TextStyle(
 
 final kSemiBoldGrayBlack24 = TextStyle(
   fontWeight: FontWeight.w600,
-  color: kGrayBlack,
+  color: kCharcoal,
   fontSize: 24.sp,
   fontFamily: "OpenSans",
 );
@@ -32,21 +32,21 @@ final kNormalBlack18 = TextStyle(
 
 final kNormalGrayBlack14 = TextStyle(
   fontWeight: FontWeight.w400,
-  color: kGrayBlack,
+  color: kCharcoal,
   fontSize: 14.sp,
   fontFamily: "OpenSans",
 );
 
 final kNormalBlue14 = TextStyle(
   fontWeight: FontWeight.w400,
-  color: kBlue,
+  color: kRoyalBlue,
   fontSize: 14.sp,
   fontFamily: "OpenSans",
 );
 
 final kNormalGrayBlack36 = TextStyle(
   fontWeight: FontWeight.w400,
-  color: kGrayBlack,
+  color: kCharcoal,
   fontSize: 36.sp,
   fontFamily: "OpenSans",
 );

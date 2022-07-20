@@ -17,7 +17,7 @@ class LoginBody extends StatelessWidget {
       flex: 5,
       child: Container(
         decoration: BoxDecoration(
-          color: kWhiteGray,
+          color: kCultured,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(
               40.w,

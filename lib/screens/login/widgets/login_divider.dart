@@ -12,7 +12,7 @@ class LoginDivider extends StatelessWidget {
       children: [
         const Expanded(
           child: Divider(
-            color: kGray,
+            color: kEerieBlack,
           ),
         ),
         SizedBox(
@@ -28,7 +28,7 @@ class LoginDivider extends StatelessWidget {
         ),
         const Expanded(
           child: Divider(
-            color: kGray,
+            color: kEerieBlack,
           ),
         ),
       ],

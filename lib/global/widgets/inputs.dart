@@ -49,7 +49,7 @@ class Inputs extends StatelessWidget {
                   decoration: BoxDecoration(
                     boxShadow: [
                       BoxShadow(
-                        color: kBlackWithOp,
+                        color: kRichBlack,
                         spreadRadius: 2.w,
                         blurRadius: 8.w,
                         offset: Offset(2.w, 2.w),

@@ -9,7 +9,7 @@ class SignupScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kGrayBlack,
+      backgroundColor: kCharcoal,
       body: SafeArea(
         child: Column(
           mainAxisSize: MainAxisSize.min,

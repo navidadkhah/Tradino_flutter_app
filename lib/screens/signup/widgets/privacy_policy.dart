@@ -18,7 +18,7 @@ class PrivacyPolicy extends StatelessWidget {
           ),
           child: Checkbox(
             checkColor: Colors.greenAccent,
-            activeColor: KDarkGreen,
+            activeColor: kMintGreen,
             focusColor: kWhite,
             value: valuefirst,
             onChanged: (args) {},
@@ -39,7 +39,7 @@ class PrivacyPolicy extends StatelessWidget {
           child: const Text(
             'privacy and policy',
             style: TextStyle(
-              color: kBlue,
+              color: kRoyalBlue,
             ),
           ),
         ),

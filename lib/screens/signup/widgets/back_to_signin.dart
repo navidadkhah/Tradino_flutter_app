@@ -27,7 +27,7 @@ class BackToSignIn extends StatelessWidget {
           child: const Text(
             'sign in',
             style: TextStyle(
-              color: kBlue,
+              color: kRoyalBlue,
             ),
           ),
         ),

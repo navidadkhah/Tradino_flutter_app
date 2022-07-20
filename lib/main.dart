@@ -24,8 +24,8 @@ class App extends StatelessWidget {
           getPages: Routes.pages,
           initialRoute: Routes.kSignup,
           theme: ThemeData(
-            scaffoldBackgroundColor: kWhiteGray,
-            primaryColor: kGrayBlack,
+            scaffoldBackgroundColor: kCultured,
+            primaryColor: kCharcoal,
           ),
         );
       },

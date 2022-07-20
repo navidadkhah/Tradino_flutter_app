@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 
-const kWhiteGray = Color.fromRGBO(246, 246, 246, 1);
-const kWhite = Color.fromRGBO(255, 255, 255, 1);
-const kGrayBlack = Color.fromRGBO(49, 61, 76, 1);
-const KLightGreen = Color.fromRGBO(110, 253, 209, 1);
-const KDarkGreen = Color.fromRGBO(148, 255, 166, 1);
-const kBlack = Color.fromRGBO(0, 0, 0, 1);
-const kBlackWithOp = Color.fromRGBO(0, 0, 0, .1);
-const kBlue = Color.fromRGBO(61, 96, 220, 1);
-const kGray = Color.fromRGBO(147, 149, 152, 1);
+const kCultured = Color(0xfff6f6f6);
+const kWhite = Color(0xFFFFFFFF);
+const kCharcoal = Color(0xFF313D4C);
+const kAquamarine = Color(0xFF6EFDD1);
+const kMintGreen = Color(0xFF94FFA6);
+const kBlack = Color(0xFF000000);
+const kRichBlack = Color(0x0000001a);
+const kRoyalBlue = Color(0xFF3D60DC);
+const kEerieBlack = Color(0xFF161B1D);
+const kYankeesBlue = Color(0x161b1d3b);
+
 final Shader linearGradient = const LinearGradient(
-  colors: <Color>[KLightGreen, KDarkGreen],
+  colors: <Color>[kAquamarine, kMintGreen],
   begin: Alignment.centerLeft,
   end: Alignment.centerRight,
 ).createShader(Rect.fromLTWH(0.0, 0.0, 0.0, 0.0));
@@ -19,16 +21,16 @@ const kGreenLinear = LinearGradient(
   begin: Alignment.centerLeft,
   end: Alignment.centerRight,
   colors: [
-    KLightGreen,
-    KDarkGreen,
+    kAquamarine,
+    kMintGreen,
   ],
 );
 
-const kWhiteLinear = LinearGradient(
-  begin: Alignment.centerLeft,
-  end: Alignment.centerRight,
-  colors: [
-    Color.fromRGBO(255, 255, 255, 1),
-    Color.fromRGBO(255, 255, 255, 0),
-  ],
-);
+// const kWhiteLinear = LinearGradient(
+//   begin: Alignment.centerLeft,
+//   end: Alignment.centerRight,
+//   colors: [
+//     Color.fromRGBO(255, 255, 255, 1),
+//     Color.fromRGBO(255, 255, 255, 0),
+//   ],
+// );

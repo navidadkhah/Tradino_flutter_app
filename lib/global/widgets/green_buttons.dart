@@ -30,7 +30,7 @@ class GreenButtons extends StatelessWidget {
             decoration: BoxDecoration(
               boxShadow: [
                 BoxShadow(
-                  color: kBlackWithOp,
+                  color: kRichBlack,
                   spreadRadius: 2.w,
                   blurRadius: 4.w,
                   offset: Offset(
