@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tradino_flutter/global/constant/colors.dart';
-import 'package:tradino_flutter/global/widgets/green_buttons.dart';
+import 'package:tradino_flutter/global/widgets/button_widget.dart';
 import 'package:tradino_flutter/global/widgets/inputs.dart';
 import 'package:tradino_flutter/screens/login/widgets/google_login.dart';
 import 'package:tradino_flutter/screens/login/widgets/login_divider.dart';
@@ -43,7 +43,7 @@ class LoginBody extends StatelessWidget {
                 bottom: 16,
               ),
               LoginForgotPassword(),
-              GreenButtons(
+              ButtonWidget(
                 title: "Login",
                 top: 8,
               ),

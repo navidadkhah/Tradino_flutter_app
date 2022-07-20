@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:tradino_flutter/global/widgets/green_buttons.dart';
+import 'package:tradino_flutter/global/widgets/button_widget.dart';
 import 'package:tradino_flutter/global/widgets/inputs.dart';
 import 'package:tradino_flutter/screens/signup/widgets/back_to_signin.dart';
 import 'package:tradino_flutter/screens/signup/widgets/privacy_policy.dart';
@@ -47,7 +47,7 @@ class SignupBody extends StatelessWidget {
                 bottom: 16,
               ),
               PrivacyPolicy(),
-              GreenButtons(
+              ButtonWidget(
                 title: "Sign Up",
                 top: 16,
               ),
