@@ -16,7 +16,7 @@ class SignupScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: const [
-            Headers(),
+            TradinoHeaderWidget(),
             SignupBody(),
           ],
         ),

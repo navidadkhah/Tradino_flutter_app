@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tradino_flutter/global/constant/colors.dart';
 import 'package:tradino_flutter/global/widgets/button_widget.dart';
-import 'package:tradino_flutter/global/widgets/inputs.dart';
+import 'package:tradino_flutter/global/widgets/inputs_widget.dart';
 import 'package:tradino_flutter/screens/login/widgets/google_login.dart';
 import 'package:tradino_flutter/screens/login/widgets/login_divider.dart';
 import 'package:tradino_flutter/screens/login/widgets/login_forgot_password.dart';
