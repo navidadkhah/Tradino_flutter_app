@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/instance_manager.dart';
 import 'package:tradino_flutter/global/constant/colors.dart';
 import 'package:tradino_flutter/global/widgets/button_widget.dart';
 import 'package:tradino_flutter/global/widgets/inputs_widget.dart';
@@ -20,32 +21,34 @@ class LoginBody extends StatelessWidget {
           color: kCultured,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(
-              40.w,
+              40.r,
             ),
             topRight: Radius.circular(
-              40.w,
+              40.r,
             ),
           ),
         ),
         child: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.min,
-            children: const [
+            children: [
               LoginPageName(),
               InputWidget(
                 title: "Email or username",
-                top: 36,
-                bottom: 16,
+                inputHeight: 36,
+                radius: 10,
+                textInputAction: TextInputAction.next,
               ),
               InputWidget(
                 title: "Password",
-                top: 0,
-                bottom: 16,
+                inputHeight: 36,
+                radius: 10,
+                textInputAction: TextInputAction.done,
               ),
               LoginForgotPassword(),
               ButtonWidget(
                 title: "Login",
-                top: 8,
+                onTap: () {},
               ),
               LoginDivider(),
               GoogleLogin(),
