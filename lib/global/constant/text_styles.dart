@@ -2,17 +2,17 @@ import 'colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-final kSemiBoldLinear41 = TextStyle(
+final kSemiBoldLinear40 = TextStyle(
   fontWeight: FontWeight.w600,
   foreground: Paint()..shader = linearGradient,
   fontSize: 40.sp,
   fontFamily: "OpenSans",
 );
 
-final kSemiBoldGrayBlack24 = TextStyle(
+final kSemiBoldCharcoal32 = TextStyle(
   fontWeight: FontWeight.w600,
   color: kCharcoal,
-  fontSize: 24.sp,
+  fontSize: 32.sp,
   fontFamily: "OpenSans",
 );
 
@@ -30,21 +30,21 @@ final kNormalBlack18 = TextStyle(
   fontFamily: "OpenSans",
 );
 
-final kNormalGrayBlack14 = TextStyle(
+final kNormalCharcoal14 = TextStyle(
   fontWeight: FontWeight.w400,
   color: kCharcoal,
   fontSize: 14.sp,
   fontFamily: "OpenSans",
 );
 
-final kNormalBlue14 = TextStyle(
+final kNormalRoyalBlue14 = TextStyle(
   fontWeight: FontWeight.w400,
   color: kRoyalBlue,
   fontSize: 14.sp,
   fontFamily: "OpenSans",
 );
 
-final kNormalGrayBlack36 = TextStyle(
+final kNormalCharcoal36 = TextStyle(
   fontWeight: FontWeight.w400,
   color: kCharcoal,
   fontSize: 36.sp,

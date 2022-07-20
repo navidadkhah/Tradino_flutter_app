@@ -57,7 +57,7 @@ class GreenButtons extends StatelessWidget {
               onPressed: null, // TODO: bind from backend
               child: Text(
                 title,
-                style: kSemiBoldGrayBlack24,
+                style: kSemiBoldCharcoal32,
               ),
             ),
           ),

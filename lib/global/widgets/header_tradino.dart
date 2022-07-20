@@ -14,7 +14,7 @@ class Headers extends StatelessWidget {
         children: [
           Text(
             "Tradino",
-            style: kSemiBoldLinear41,
+            style: kSemiBoldLinear40,
           ),
         ],
       ),

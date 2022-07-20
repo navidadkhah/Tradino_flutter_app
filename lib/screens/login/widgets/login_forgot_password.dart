@@ -10,7 +10,7 @@ class LoginForgotPassword extends StatelessWidget {
       onPressed: null, // TODO: go to forgot pass page
       child: Text(
         "Forgot password",
-        style: kNormalGrayBlack14,
+        style: kNormalCharcoal14,
       ),
     );
   }

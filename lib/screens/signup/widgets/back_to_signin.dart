@@ -19,7 +19,7 @@ class BackToSignIn extends StatelessWidget {
         ),
         TextButton(
           style: TextButton.styleFrom(
-            textStyle: kNormalBlue14,
+            textStyle: kNormalRoyalBlue14,
           ),
           onPressed: () {
             Get.offAllNamed("/login");

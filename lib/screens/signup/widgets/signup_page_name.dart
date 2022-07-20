@@ -16,7 +16,7 @@ class SignupPageName extends StatelessWidget {
         children: [
           Text(
             "Sign Up",
-            style: kSemiBoldGrayBlack24,
+            style: kSemiBoldCharcoal32,
           ),
         ],
       ),

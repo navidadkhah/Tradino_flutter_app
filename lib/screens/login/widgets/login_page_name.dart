@@ -16,7 +16,7 @@ class LoginPageName extends StatelessWidget {
         children: [
           Text(
             "Login",
-            style: kNormalGrayBlack36,
+            style: kNormalCharcoal36,
           ),
         ],
       ),

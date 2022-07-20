@@ -26,11 +26,11 @@ class PrivacyPolicy extends StatelessWidget {
         ),
         Text(
           "I Agree with",
-          style: kNormalGrayBlack14,
+          style: kNormalCharcoal14,
         ),
         TextButton(
           style: TextButton.styleFrom(
-            textStyle: kNormalBlue14,
+            textStyle: kNormalRoyalBlue14,
           ),
           onPressed: () {
             print("privacy policy page");
