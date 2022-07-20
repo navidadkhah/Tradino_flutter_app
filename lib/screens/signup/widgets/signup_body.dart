@@ -31,17 +31,17 @@ class SignupBody extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: const [
               SignupPageName(),
-              Inputs(
+              InputWidget(
                 title: "Username",
                 top: 24,
                 bottom: 16,
               ),
-              Inputs(
+              InputWidget(
                 title: "Email",
                 top: 0,
                 bottom: 16,
               ),
-              Inputs(
+              InputWidget(
                 title: "Password",
                 top: 0,
                 bottom: 16,

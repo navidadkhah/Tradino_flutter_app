@@ -32,12 +32,12 @@ class LoginBody extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: const [
               LoginPageName(),
-              Inputs(
+              InputWidget(
                 title: "Email or username",
                 top: 36,
                 bottom: 16,
               ),
-              Inputs(
+              InputWidget(
                 title: "Password",
                 top: 0,
                 bottom: 16,

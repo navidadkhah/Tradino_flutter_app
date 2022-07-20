@@ -15,7 +15,7 @@ final Shader linearGradient = const LinearGradient(
   colors: <Color>[kAquamarine, kMintGreen],
   begin: Alignment.centerLeft,
   end: Alignment.centerRight,
-).createShader(Rect.fromLTWH(0.0, 0.0, 0.0, 0.0));
+).createShader(const Rect.fromLTWH(0.0, 0.0, 0.0, 0.0));
 
 const kGreenLinear = LinearGradient(
   begin: Alignment.centerLeft,
