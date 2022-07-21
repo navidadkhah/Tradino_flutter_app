@@ -9,8 +9,8 @@ import 'package:tradino_flutter/screens/login/widgets/login_divider.dart';
 import 'package:tradino_flutter/screens/login/widgets/login_forgot_password.dart';
 import 'package:tradino_flutter/screens/login/widgets/login_page_name.dart';
 
-class LoginBody extends StatelessWidget {
-  const LoginBody({Key? key}) : super(key: key);
+class LoginBodyWidget extends StatelessWidget {
+  const LoginBodyWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -44,14 +44,16 @@ class LoginBody extends StatelessWidget {
                 inputHeight: 36,
                 radius: 10,
                 textInputAction: TextInputAction.done,
+                keyboardType: TextInputType.visiblePassword,
+                suffix: Icon(Icons.remove_red_eye),
               ),
-              LoginForgotPassword(),
+              LoginForgotPasswordWidget(),
               ButtonWidget(
                 title: "Login",
                 onTap: () {},
               ),
-              LoginDivider(),
-              GoogleLogin(),
+              LoginDividerWidget(),
+              GoogleLoginWidget(),
             ],
           ),
         ),

@@ -15,6 +15,7 @@ class InputWidget extends StatelessWidget {
     this.suffix,
     this.textInputAction,
     this.textEditingController,
+    this.suffixIcon,
   }) : super(key: key);
 
   final String title;
@@ -25,6 +26,7 @@ class InputWidget extends StatelessWidget {
   final Widget? suffix;
   final TextInputAction? textInputAction;
   final TextEditingController? textEditingController;
+  final IconButton? suffixIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +49,8 @@ class InputWidget extends StatelessWidget {
             controller: textEditingController,
             textInputAction: textInputAction,
             decoration: InputDecoration(
-              suffix: suffix,
+              suffixIcon: suffixIcon,
+              // suffix: suffix,
               border: InputBorder.none,
               fillColor: kWhite,
               filled: true,

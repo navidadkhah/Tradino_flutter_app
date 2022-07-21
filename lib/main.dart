@@ -26,6 +26,7 @@ class App extends StatelessWidget {
           theme: ThemeData(
             scaffoldBackgroundColor: kCultured,
             primaryColor: kCharcoal,
+            fontFamily: "OpenSans",
           ),
         );
       },

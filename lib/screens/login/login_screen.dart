@@ -17,7 +17,7 @@ class LoginScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: const [
             TradinoHeaderWidget(),
-            LoginBody(),
+            LoginBodyWidget(),
           ],
         ),
       ),

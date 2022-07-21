@@ -35,7 +35,7 @@ class ButtonWidget extends StatelessWidget {
       ),
       child: Material(
         borderRadius: BorderRadius.circular(radius ?? 24.0.r),
-        color: kBlack,
+        color: kMintGreen,
         child: InkWell(
           borderRadius: BorderRadius.circular(radius ?? 24.0.r),
           splashColor: kMintGreen,

@@ -5,8 +5,8 @@ import 'package:get/get.dart';
 import 'package:tradino_flutter/global/constant/colors.dart';
 import 'package:tradino_flutter/global/constant/text_styles.dart';
 
-class BackToSignIn extends StatelessWidget {
-  const BackToSignIn({Key? key}) : super(key: key);
+class BackToSignInWidget extends StatelessWidget {
+  const BackToSignInWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

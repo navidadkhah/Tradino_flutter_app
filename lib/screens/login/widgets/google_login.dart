@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tradino_flutter/global/constant/colors.dart';
 import 'package:tradino_flutter/global/constant/text_styles.dart';
 
-class GoogleLogin extends StatelessWidget {
-  const GoogleLogin({Key? key}) : super(key: key);
+class GoogleLoginWidget extends StatelessWidget {
+  const GoogleLoginWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -1,57 +1,89 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:tradino_flutter/global/constant/text_styles.dart';
 import 'package:tradino_flutter/global/widgets/button_widget.dart';
 import 'package:tradino_flutter/global/widgets/inputs_widget.dart';
+import 'package:tradino_flutter/screens/signup/signup_controller.dart';
 import 'package:tradino_flutter/screens/signup/widgets/back_to_signin.dart';
 import 'package:tradino_flutter/screens/signup/widgets/privacy_policy.dart';
-import 'package:tradino_flutter/screens/signup/widgets/signup_page_name.dart';
 import '../../../global/constant/colors.dart';
 
-class SignupBody extends StatelessWidget {
-  const SignupBody({Key? key}) : super(key: key);
+class SignupBodyWidget extends StatelessWidget {
+  const SignupBodyWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final SignupController controller = Get.find();
+
     return Expanded(
       flex: 5,
       child: Container(
+        padding: EdgeInsets.symmetric(horizontal: 24.0.w),
         decoration: BoxDecoration(
           color: kCultured,
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(
-              40.w,
-            ),
-            topRight: Radius.circular(
-              40.w,
-            ),
+          borderRadius: BorderRadius.vertical(
+            top: Radius.circular(40.0.r),
           ),
         ),
         child: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.min,
-            children: const [
-              SignupPageName(),
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(height: 12.0.h),
+              Center(
+                child: Text(
+                  "Sign Up",
+                  style: kSemiBoldCharcoal32,
+                ),
+              ),
+              SizedBox(height: 24.0.h),
               InputWidget(
                 title: "Username",
-                top: 24,
-                bottom: 16,
+                textEditingController: controller.usernameTextController,
+                textInputAction: TextInputAction.next,
+                radius: 10,
+                inputHeight: 48,
               ),
+              SizedBox(height: 12.0.h),
               InputWidget(
                 title: "Email",
-                top: 0,
-                bottom: 16,
+                textEditingController: controller.emailTextController,
+                textInputAction: TextInputAction.next,
+                radius: 10,
+                inputHeight: 48,
+                keyboardType: TextInputType.emailAddress,
               ),
+              SizedBox(height: 12.0.h),
               InputWidget(
                 title: "Password",
-                top: 0,
-                bottom: 16,
+                textEditingController: controller.passwordTextController,
+                textInputAction: TextInputAction.done,
+                radius: 10,
+                inputHeight: 48,
+                obscureText: true,
+                suffixIcon: IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.remove_red_eye,
+                    )),
               ),
-              PrivacyPolicy(),
-              ButtonWidget(
-                title: "Sign Up",
-                top: 16,
+              SizedBox(height: 20.0.h),
+              const PrivacyPolicyCheckBoxWidget(),
+              SizedBox(height: 20.0.h),
+              Center(
+                child: ButtonWidget(
+                  width: double.infinity,
+                  height: 52.0.h,
+                  title: "Sign Up",
+                  onTap: () {},
+                ),
               ),
-              BackToSignIn(),
+              SizedBox(height: 8.0.h),
+              const Center(
+                child: BackToSignInWidget(),
+              ),
             ],
           ),
         ),
