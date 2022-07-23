@@ -10,19 +10,16 @@ import 'package:tradino_flutter/screens/login/widgets/back_to_signup_widget.dart
 import 'package:tradino_flutter/screens/login/widgets/google_login.dart';
 import 'package:tradino_flutter/screens/login/widgets/login_divider.dart';
 
-import 'package:tradino_flutter/screens/signup/widgets/back_to_signin.dart';
-import 'package:tradino_flutter/screens/signup/widgets/privacy_policy.dart';
-
 class LoginBodyWidget extends StatelessWidget {
   const LoginBodyWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final LoginController controller = Get.find();
+
     return Expanded(
       flex: 5,
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 24.0.w),
         decoration: BoxDecoration(
           color: kCultured,
           borderRadius: BorderRadius.vertical(
@@ -30,6 +27,7 @@ class LoginBodyWidget extends StatelessWidget {
           ),
         ),
         child: SingleChildScrollView(
+          padding: EdgeInsets.symmetric(horizontal: 24.0.w),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -45,9 +43,9 @@ class LoginBodyWidget extends StatelessWidget {
               InputWidget(
                 title: "Email or username",
                 textEditingController: controller.emailUesernameTextController,
-                textInputAction: TextInputAction.done,
-                radius: 10,
-                inputHeight: 48,
+                textInputAction: TextInputAction.next,
+                radius: 8.0.r,
+                inputHeight: 36.0.h,
                 obscureText: false,
               ),
               SizedBox(height: 12.0.h),
@@ -55,87 +53,41 @@ class LoginBodyWidget extends StatelessWidget {
                 title: "Password",
                 textEditingController: controller.passwordTextController,
                 textInputAction: TextInputAction.done,
-                radius: 10,
-                inputHeight: 48,
+                radius: 8.0.r,
+                inputHeight: 36.0.h,
                 obscureText: true,
               ),
-              SizedBox(height: 20.0.h),
+              SizedBox(height: 12.0.h),
               Center(
                 child: TextButton(
-                  onPressed: null,
+                  onPressed: () {},
                   child: Text(
                     "Forgot password",
                     style: kNormalBlack14,
                   ),
                 ),
               ),
-              SizedBox(height: 20.0.h),
+              SizedBox(height: 12.0.h),
               Center(
                 child: ButtonWidget(
-                  width: double.infinity,
+                  width: double.infinity.sw,
                   height: 52.0.h,
-                  title: "Sign Up",
+                  title: "Login",
                   onTap: () {},
                 ),
               ),
               SizedBox(height: 8.0.h),
+              const LoginDividerWidget(),
+              SizedBox(height: 8.0.h),
+              const GoogleLoginWidget(),
+              SizedBox(height: 8.0.h),
               const Center(
                 child: BackToSignupWidget(),
               ),
-              LoginDividerWidget(),
-              GoogleLoginWidget(),
             ],
           ),
         ),
       ),
     );
-
-    // return Expanded(
-    //   flex: 5,
-    //   child: Container(
-    //     decoration: BoxDecoration(
-    //       color: kCultured,
-    //       borderRadius: BorderRadius.only(
-    //         topLeft: Radius.circular(
-    //           40.r,
-    //         ),
-    //         topRight: Radius.circular(
-    //           40.r,
-    //         ),
-    //       ),
-    //     ),
-    //     child: SingleChildScrollView(
-    //       child: Column(
-    //         mainAxisSize: MainAxisSize.min,
-    //         children: [
-    //           LoginPageName(),
-    //           InputWidget(
-    //             title: "Email or username",
-    //             textEditingController: controller.emailUesernameTextController,
-    //             textInputAction: TextInputAction.done,
-    //             radius: 10,
-    //             inputHeight: 48,
-    //             obscureText: false,
-    //           ),
-    //           InputWidget(
-    //             title: "Password",
-    //             textEditingController: controller.passwordTextController,
-    //             textInputAction: TextInputAction.done,
-    //             radius: 10,
-    //             inputHeight: 48,
-    //             obscureText: true,
-    //           ),
-    //           LoginForgotPasswordWidget(),
-    //           ButtonWidget(
-    //             title: "Login",
-    //             onTap: () {},
-    //           ),
-    //           LoginDividerWidget(),
-    //           GoogleLoginWidget(),
-    //         ],
-    //       ),
-    //     ),
-    //   ),
-    // );
   }
 }

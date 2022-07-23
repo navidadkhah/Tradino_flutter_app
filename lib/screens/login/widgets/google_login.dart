@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tradino_flutter/global/constant/colors.dart';
+import 'package:tradino_flutter/global/constant/shadows.dart';
 import 'package:tradino_flutter/global/constant/text_styles.dart';
 
 class GoogleLoginWidget extends StatelessWidget {
@@ -8,55 +9,46 @@ class GoogleLoginWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisSize: MainAxisSize.min,
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        Padding(
-          padding: EdgeInsets.only(
-            left: 20.w,
-            right: 28.w,
+    return Container(
+      height: 44.h,
+      decoration: BoxDecoration(
+        boxShadow: [
+          kButtonWidgetShadow1,
+          kButtonWidgetShadow2,
+        ],
+        borderRadius: BorderRadius.circular(10.r),
+      ),
+      child: ElevatedButton(
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all<Color>(
+            kCultured,
           ),
-          child: Container(
-            width: .8.sw,
-            height: 44.h,
-            decoration: BoxDecoration(
-              boxShadow: [
-                BoxShadow(
-                  color: kRichBlack,
-                  spreadRadius: 2.w,
-                  blurRadius: 4.w,
-                  offset: Offset(
-                    2.w,
-                    2.w,
-                  ),
-                ),
-              ],
-              color: kWhite,
-              //gradient: kWhiteLinear,
-              borderRadius: BorderRadius.circular(
-                10.w,
-              ),
-            ),
-            child: ElevatedButton(
-              style: ButtonStyle(
-                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                  RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(
-                      10.w,
-                    ),
-                  ),
-                ),
-              ),
-              onPressed: null, // TODO: bind from backend
-              child: Text(
-                "Login With Google",
-                style: kNormalBlack18,
-              ),
+          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.r),
             ),
           ),
         ),
-      ],
+        onPressed: () {}, // TODO: bind from backend
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              'assets/images/google.png',
+              height: 28.h,
+              width: 28.w,
+              cacheHeight: 40,
+            ),
+            SizedBox(
+              width: 4.w,
+            ),
+            Text(
+              "Login With Google",
+              style: kNormalBlack18,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

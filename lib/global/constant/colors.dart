@@ -20,6 +20,7 @@ final Shader linearGradient = const LinearGradient(
 const kGreenLinear = LinearGradient(
   begin: Alignment.centerLeft,
   end: Alignment.centerRight,
+  tileMode: TileMode.decal,
   colors: [
     kAquamarine,
     kMintGreen,

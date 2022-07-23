@@ -20,5 +20,5 @@ final kButtonWidgetShadow2 = BoxShadow(
   color: kCharcoal,
   blurRadius: 10.0.r,
   spreadRadius: 0.0.r,
-  offset: Offset(4.0.w, 4.0.h),
+  offset: Offset(5.0.w, 5.0.h),
 );

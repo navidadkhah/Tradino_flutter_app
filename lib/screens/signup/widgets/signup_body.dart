@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tradino_flutter/global/constant/text_styles.dart';
 import 'package:tradino_flutter/global/widgets/button_widget.dart';
-import 'package:tradino_flutter/global/widgets/inputs_controller_widget.dart';
 import 'package:tradino_flutter/global/widgets/inputs_widget.dart';
 import 'package:tradino_flutter/screens/signup/signup_controller.dart';
 import 'package:tradino_flutter/screens/signup/widgets/back_to_signin.dart';
@@ -16,13 +15,10 @@ class SignupBodyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final SignupController controller = Get.find();
-    final InputControllerWidget visiblityController =
-        Get.put(InputControllerWidget());
 
     return Expanded(
       flex: 5,
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 24.0.w),
         decoration: BoxDecoration(
           color: kCultured,
           borderRadius: BorderRadius.vertical(
@@ -30,6 +26,7 @@ class SignupBodyWidget extends StatelessWidget {
           ),
         ),
         child: SingleChildScrollView(
+          padding: EdgeInsets.symmetric(horizontal: 24.0.w),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -46,8 +43,8 @@ class SignupBodyWidget extends StatelessWidget {
                 title: "Username",
                 textEditingController: controller.usernameTextController,
                 textInputAction: TextInputAction.next,
-                radius: 10,
-                inputHeight: 48,
+                radius: 8.0.r,
+                inputHeight: 36.0.h,
                 obscureText: false,
               ),
               SizedBox(height: 12.0.h),
@@ -55,8 +52,8 @@ class SignupBodyWidget extends StatelessWidget {
                 title: "Email",
                 textEditingController: controller.emailTextController,
                 textInputAction: TextInputAction.next,
-                radius: 10,
-                inputHeight: 48,
+                radius: 8.0.r,
+                inputHeight: 36.0.h,
                 keyboardType: TextInputType.emailAddress,
                 obscureText: false,
               ),
@@ -65,8 +62,8 @@ class SignupBodyWidget extends StatelessWidget {
                 title: "Password",
                 textEditingController: controller.passwordTextController,
                 textInputAction: TextInputAction.done,
-                radius: 10,
-                inputHeight: 48,
+                radius: 8.0.r,
+                inputHeight: 36.0.h,
                 obscureText: true,
               ),
               SizedBox(height: 20.0.h),
