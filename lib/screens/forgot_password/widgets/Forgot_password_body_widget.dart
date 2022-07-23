@@ -3,10 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tradino_flutter/global/constant/colors.dart';
 import 'package:tradino_flutter/global/constant/text_styles.dart';
+import 'package:tradino_flutter/global/widgets/back_text_widget.dart';
 import 'package:tradino_flutter/global/widgets/button_widget.dart';
 import 'package:tradino_flutter/global/widgets/inputs_widget.dart';
 import 'package:tradino_flutter/screens/forgot_password/forgot_password_controller.dart';
-import 'package:tradino_flutter/screens/forgot_password/widgets/back_to_login_widget.dart';
 
 class ForgotPasswordBodyWidget extends StatelessWidget {
   const ForgotPasswordBodyWidget({Key? key}) : super(key: key);
@@ -68,7 +68,11 @@ class ForgotPasswordBodyWidget extends StatelessWidget {
                 onTap: () {},
               ),
               SizedBox(height: 12.0.h),
-              BackToLoginWidget(),
+              const BackTextWidget(
+                title: "Remember password ?",
+                pageName: "Login",
+                getName: "/login",
+              ),
             ],
           ),
         ),

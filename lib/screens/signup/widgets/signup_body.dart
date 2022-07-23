@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tradino_flutter/global/constant/text_styles.dart';
+import 'package:tradino_flutter/global/widgets/back_text_widget.dart';
 import 'package:tradino_flutter/global/widgets/button_widget.dart';
 import 'package:tradino_flutter/global/widgets/inputs_widget.dart';
 import 'package:tradino_flutter/screens/signup/signup_controller.dart';
-import 'package:tradino_flutter/screens/signup/widgets/back_to_signin.dart';
 import 'package:tradino_flutter/screens/signup/widgets/privacy_policy.dart';
 import '../../../global/constant/colors.dart';
 
@@ -77,7 +77,11 @@ class SignupBodyWidget extends StatelessWidget {
               ),
               SizedBox(height: 8.0.h),
               const Center(
-                child: BackToSignInWidget(),
+                child: BackTextWidget(
+                  title: "Already have an account ?",
+                  pageName: "sign in",
+                  getName: "/login",
+                ),
               ),
             ],
           ),

@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:get/instance_manager.dart';
 import 'package:tradino_flutter/global/constant/colors.dart';
 import 'package:tradino_flutter/global/constant/text_styles.dart';
+import 'package:tradino_flutter/global/widgets/back_text_widget.dart';
 import 'package:tradino_flutter/global/widgets/button_widget.dart';
 import 'package:tradino_flutter/global/widgets/inputs_widget.dart';
 import 'package:tradino_flutter/screens/login/login_controller.dart';
-import 'package:tradino_flutter/screens/login/widgets/back_to_signup_widget.dart';
 import 'package:tradino_flutter/screens/login/widgets/google_login.dart';
 import 'package:tradino_flutter/screens/login/widgets/login_divider.dart';
 
@@ -84,7 +83,11 @@ class LoginBodyWidget extends StatelessWidget {
               const GoogleLoginWidget(),
               SizedBox(height: 4.0.h),
               const Center(
-                child: BackToSignupWidget(),
+                child: BackTextWidget(
+                  title: "Dont have an account ?",
+                  pageName: "sign up",
+                  getName: "/signup",
+                ),
               ),
             ],
           ),

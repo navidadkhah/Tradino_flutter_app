@@ -1,12 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter/src/foundation/key.dart';
+import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
-
 import 'package:tradino_flutter/global/constant/colors.dart';
 import 'package:tradino_flutter/global/constant/text_styles.dart';
 
-class BackToSignInWidget extends StatelessWidget {
-  const BackToSignInWidget({Key? key}) : super(key: key);
+class BackTextWidget extends StatelessWidget {
+  const BackTextWidget({
+    Key? key,
+    required this.title,
+    required this.pageName,
+    required this.getName,
+  }) : super(key: key);
+  final String title;
+  final String pageName;
+  final String getName;
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +22,7 @@ class BackToSignInWidget extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         Text(
-          "Already have an account?",
+          title,
           style: kNormalBlack14,
         ),
         TextButton(
@@ -22,11 +30,11 @@ class BackToSignInWidget extends StatelessWidget {
             textStyle: kNormalRoyalBlue14,
           ),
           onPressed: () {
-            Get.offAllNamed("/login");
+            Get.offAllNamed(getName);
           },
-          child: const Text(
-            'sign in',
-            style: TextStyle(
+          child: Text(
+            pageName,
+            style: const TextStyle(
               color: kRoyalBlue,
             ),
           ),
