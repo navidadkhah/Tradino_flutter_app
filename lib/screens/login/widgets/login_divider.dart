@@ -15,9 +15,6 @@ class LoginDividerWidget extends StatelessWidget {
             color: kEerieBlack,
           ),
         ),
-        SizedBox(
-          height: 24.h,
-        ),
         Padding(
           padding: EdgeInsets.symmetric(
             horizontal: 16.w,

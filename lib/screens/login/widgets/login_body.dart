@@ -39,7 +39,7 @@ class LoginBodyWidget extends StatelessWidget {
                   style: kSemiBoldCharcoal32,
                 ),
               ),
-              SizedBox(height: 36.0.h),
+              SizedBox(height: 24.0.h),
               InputWidget(
                 title: "Email or username",
                 textEditingController: controller.emailUesernameTextController,
@@ -57,30 +57,30 @@ class LoginBodyWidget extends StatelessWidget {
                 inputHeight: 36.0.h,
                 obscureText: true,
               ),
-              SizedBox(height: 12.0.h),
+              SizedBox(height: 8.0.h),
               Center(
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {}, // TODO: go to forgot page
                   child: Text(
                     "Forgot password",
                     style: kNormalBlack14,
                   ),
                 ),
               ),
-              SizedBox(height: 12.0.h),
+              SizedBox(height: 8.0.h),
               Center(
                 child: ButtonWidget(
-                  width: double.infinity.sw,
+                  width: double.infinity,
                   height: 52.0.h,
                   title: "Login",
                   onTap: () {},
                 ),
               ),
-              SizedBox(height: 8.0.h),
+              SizedBox(height: 12.0.h),
               const LoginDividerWidget(),
-              SizedBox(height: 8.0.h),
+              SizedBox(height: 12.0.h),
               const GoogleLoginWidget(),
-              SizedBox(height: 8.0.h),
+              SizedBox(height: 4.0.h),
               const Center(
                 child: BackToSignupWidget(),
               ),
