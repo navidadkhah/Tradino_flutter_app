@@ -10,6 +10,7 @@ const kRichBlack = Color(0x0000001a);
 const kRoyalBlue = Color(0xFF3D60DC);
 const kEerieBlack = Color(0xFF161B1D);
 const kYankeesBlue = Color(0x161b1d3b);
+const kGhostWhite = Color(0xFFFFFEFA);
 
 final Shader linearGradient = const LinearGradient(
   colors: <Color>[kAquamarine, kMintGreen],

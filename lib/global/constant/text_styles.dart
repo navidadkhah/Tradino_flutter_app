@@ -13,6 +13,11 @@ final kSemiBoldCharcoal32 = TextStyle(
   color: kCharcoal,
   fontSize: 32.sp,
 );
+final kSemiBoldCharcoal24 = TextStyle(
+  fontWeight: FontWeight.w600,
+  color: kCharcoal,
+  fontSize: 24.sp,
+);
 
 final kNormalBlack14 = TextStyle(
   fontWeight: FontWeight.w400,

@@ -10,15 +10,15 @@ final kInputContainerShadow = BoxShadow(
 );
 
 final kButtonWidgetShadow1 = BoxShadow(
-  color: kWhite,
+  color: kGhostWhite,
   blurRadius: 10.0.r,
   spreadRadius: 0.0.r,
   offset: Offset(-5.0.w, -5.0.h),
 );
 
 final kButtonWidgetShadow2 = BoxShadow(
-  color: kCharcoal,
+  color: kEerieBlack,
   blurRadius: 10.0.r,
-  spreadRadius: 0.0.r,
+  spreadRadius: -8.0.r,
   offset: Offset(5.0.w, 5.0.h),
 );
