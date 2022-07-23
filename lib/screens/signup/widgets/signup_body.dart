@@ -69,13 +69,11 @@ class SignupBodyWidget extends StatelessWidget {
               SizedBox(height: 20.0.h),
               const PrivacyPolicyCheckBoxWidget(),
               SizedBox(height: 20.0.h),
-              Center(
-                child: ButtonWidget(
-                  width: double.infinity,
-                  height: 52.0.h,
-                  title: "Sign Up",
-                  onTap: () {},
-                ),
+              ButtonWidget(
+                width: double.infinity,
+                height: 52.0.h,
+                title: "Sign Up",
+                onTap: () {},
               ),
               SizedBox(height: 8.0.h),
               const Center(

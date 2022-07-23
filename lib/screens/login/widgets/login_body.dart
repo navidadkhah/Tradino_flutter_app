@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:get/instance_manager.dart';
 import 'package:tradino_flutter/global/constant/colors.dart';
 import 'package:tradino_flutter/global/constant/text_styles.dart';
@@ -44,6 +45,7 @@ class LoginBodyWidget extends StatelessWidget {
                 title: "Email or username",
                 textEditingController: controller.emailUesernameTextController,
                 textInputAction: TextInputAction.next,
+                keyboardType: TextInputType.emailAddress,
                 radius: 8.0.r,
                 inputHeight: 36.0.h,
                 obscureText: false,
@@ -60,7 +62,9 @@ class LoginBodyWidget extends StatelessWidget {
               SizedBox(height: 8.0.h),
               Center(
                 child: TextButton(
-                  onPressed: () {}, // TODO: go to forgot page
+                  onPressed: () {
+                    Get.offAllNamed("/forgotpassword");
+                  },
                   child: Text(
                     "Forgot password",
                     style: kNormalBlack14,
@@ -68,13 +72,11 @@ class LoginBodyWidget extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 8.0.h),
-              Center(
-                child: ButtonWidget(
-                  width: double.infinity,
-                  height: 52.0.h,
-                  title: "Login",
-                  onTap: () {},
-                ),
+              ButtonWidget(
+                width: double.infinity,
+                height: 52.0.h,
+                title: "Login",
+                onTap: () {},
               ),
               SizedBox(height: 12.0.h),
               const LoginDividerWidget(),
