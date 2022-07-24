@@ -1,19 +1,18 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tradino_flutter/global/constant/colors.dart';
 import 'package:tradino_flutter/global/constant/text_styles.dart';
-import 'package:tradino_flutter/global/widgets/back_text_widget.dart';
 import 'package:tradino_flutter/global/widgets/button_widget.dart';
-import 'package:tradino_flutter/global/widgets/inputs_widget.dart';
 import 'package:tradino_flutter/screens/forgot_password/forgot_password_controller.dart';
+import 'package:pinput/pinput.dart';
 
-class ForgotPasswordBodyWidget extends StatelessWidget {
-  const ForgotPasswordBodyWidget({Key? key}) : super(key: key);
+class VerifyEmailBodyWidget extends StatelessWidget {
+  const VerifyEmailBodyWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final ForgotPasswordController controller = Get.find();
+    final ForgotPasswordController email = Get.find();
 
     return Expanded(
       flex: 5,
@@ -32,7 +31,7 @@ class ForgotPasswordBodyWidget extends StatelessWidget {
             children: [
               SizedBox(height: 24.0.h),
               Text(
-                "Forgot your password ?",
+                "Verification your email !",
                 style: kSemiBoldCharcoal24,
               ),
               SizedBox(height: 24.0.h),
@@ -41,41 +40,26 @@ class ForgotPasswordBodyWidget extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
-                    "Please Enter your email address to",
+                    "Please Enter The Code Send to",
                     style: kNormalBlack14,
                   ),
                   Text(
-                    "resieve a verification code",
+                    email.emailTextController.text,
                     style: kNormalBlack14,
                   )
                 ],
               ),
               SizedBox(height: 32.0.h),
-              InputWidget(
-                title: "Email",
-                textEditingController: controller.emailTextController,
-                textInputAction: TextInputAction.done,
-                keyboardType: TextInputType.emailAddress,
-                radius: 8.0.r,
-                inputHeight: 36.0.h,
-                obscureText: false,
+              Text(
+                "Resend code",
+                style: kSemiBoldRoyalBlue16,
               ),
               SizedBox(height: 128.0.h),
               ButtonWidget(
                 width: double.infinity,
                 height: 52.0.h,
-                title: "Send",
-                onTap: () {
-                  Get.offAllNamed('/verifyemail');
-                },
-                // TODO: tap to send a verification email and go to
-                // verification email page
-              ),
-              SizedBox(height: 12.0.h),
-              const BackTextWidget(
-                title: "Remember password ?",
-                pageName: "Login",
-                getName: "/login",
+                title: "Verify",
+                onTap: () {},
               ),
             ],
           ),
