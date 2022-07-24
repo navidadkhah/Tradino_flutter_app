@@ -5,7 +5,7 @@ import 'package:tradino_flutter/global/constant/colors.dart';
 import 'package:tradino_flutter/global/constant/text_styles.dart';
 import 'package:tradino_flutter/global/widgets/button_widget.dart';
 import 'package:tradino_flutter/screens/forgot_password/forgot_password_controller.dart';
-import 'package:pinput/pinput.dart';
+//import 'package:pinput/pinput.dart';
 
 class VerifyEmailBodyWidget extends StatelessWidget {
   const VerifyEmailBodyWidget({Key? key}) : super(key: key);
