@@ -70,7 +70,11 @@ class VerifyEmailBodyWidget extends StatelessWidget {
                 width: double.infinity,
                 height: 52.0.h,
                 title: "Verify",
-                onTap: () {},
+                onTap: () {
+                  Get.arguments == '/signup'
+                      ? null // TODO: go to home page
+                      : Get.offAllNamed('/createnewpassword');
+                },
               ),
               SizedBox(height: 12.0.h),
             ],
