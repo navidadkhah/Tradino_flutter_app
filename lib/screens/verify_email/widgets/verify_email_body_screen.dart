@@ -68,6 +68,7 @@ class VerifyEmailBodyWidget extends StatelessWidget {
                 title: "Verify",
                 onTap: () {},
               ),
+              SizedBox(height: 12.0.h),
             ],
           ),
         ),

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:tradino_flutter/global/constant/colors.dart';
 import 'package:tradino_flutter/global/widgets/tradino_header_widget.dart';
 import 'package:tradino_flutter/screens/forgot_password/widgets/Forgot_password_body_widget.dart';

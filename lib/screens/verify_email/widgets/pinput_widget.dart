@@ -18,7 +18,6 @@ class PinputWidget extends StatelessWidget {
       androidSmsAutofillMethod: AndroidSmsAutofillMethod.smsRetrieverApi,
       length: 4,
       controller: controller.verifyTextController,
-      autofocus: true,
       defaultPinTheme: PinTheme(
         margin: EdgeInsets.symmetric(horizontal: 4.0.w),
         width: 52.0.w,

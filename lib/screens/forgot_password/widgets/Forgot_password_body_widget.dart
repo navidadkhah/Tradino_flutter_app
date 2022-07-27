@@ -66,7 +66,7 @@ class ForgotPasswordBodyWidget extends StatelessWidget {
                 height: 52.0.h,
                 title: "Send",
                 onTap: () {
-                  Get.offAllNamed('/verifyemail');
+                  Get.toNamed('/verifyemail');
                 },
                 // TODO: tap to send a verification email and go to
                 // verification email page
