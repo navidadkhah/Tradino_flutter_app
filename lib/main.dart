@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tradino_flutter/global/constant/colors.dart';
+import 'package:tradino_flutter/global/widgets/inputs_controller_widget.dart';
 import 'package:tradino_flutter/screens/signup/signup_controller.dart';
 import 'global/constant/routes.dart';
 import 'screens/forgot_password/forgot_password_controller.dart';
@@ -40,4 +41,5 @@ class App extends StatelessWidget {
 initialControllers() {
   Get.put(SignupController(), permanent: true);
   Get.put(ForgotPasswordController(), permanent: true);
+  Get.put(InputControllerWidget(), permanent: true);
 }

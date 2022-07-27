@@ -1,6 +1,6 @@
+import 'package:get/get.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
 import 'package:tradino_flutter/global/constant/colors.dart';
 import 'package:tradino_flutter/global/constant/text_styles.dart';
 import 'package:tradino_flutter/global/widgets/button_widget.dart';
