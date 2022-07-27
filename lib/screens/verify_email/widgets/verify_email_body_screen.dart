@@ -5,6 +5,7 @@ import 'package:tradino_flutter/global/constant/colors.dart';
 import 'package:tradino_flutter/global/constant/text_styles.dart';
 import 'package:tradino_flutter/global/widgets/button_widget.dart';
 import 'package:tradino_flutter/screens/forgot_password/forgot_password_controller.dart';
+import 'package:tradino_flutter/screens/signup/signup_controller.dart';
 import 'package:tradino_flutter/screens/verify_email/widgets/pinput_widget.dart';
 
 class VerifyEmailBodyWidget extends StatelessWidget {
@@ -12,7 +13,8 @@ class VerifyEmailBodyWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ForgotPasswordController controller = Get.find();
+    final ForgotPasswordController forgotPasswordController = Get.find();
+    final SignupController signupController = Get.find();
 
     return Expanded(
       flex: 5,
@@ -32,7 +34,7 @@ class VerifyEmailBodyWidget extends StatelessWidget {
               SizedBox(height: 36.0.h),
               Text(
                 "Verification your email !",
-                style: kSemiBoldCharcoal24,
+                style: kSemiBoldBlack24,
               ),
               SizedBox(height: 24.0.h),
               Column(
@@ -44,7 +46,9 @@ class VerifyEmailBodyWidget extends StatelessWidget {
                     style: kNormalBlack14,
                   ),
                   Text(
-                    controller.emailTextController.text,
+                    Get.arguments == '/signup'
+                        ? signupController.emailTextController.text
+                        : forgotPasswordController.emailTextController.text,
                     style: kNormalBlack14,
                   )
                 ],

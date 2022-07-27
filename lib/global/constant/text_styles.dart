@@ -20,6 +20,12 @@ final kSemiBoldCharcoal24 = TextStyle(
   fontSize: 24.sp,
 );
 
+final kSemiBoldBlack24 = TextStyle(
+  fontWeight: FontWeight.w600,
+  color: kBlack,
+  fontSize: 24.sp,
+);
+
 final kSemiBoldRoyalBlue16 = TextStyle(
   fontWeight: FontWeight.w600,
   color: kRoyalBlue,
