@@ -3,8 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tradino_flutter/global/constant/colors.dart';
 import 'global/constant/routes.dart';
+import 'screens/forgot_password/forgot_password_controller.dart';
 
 void main() {
+  initialControllers();
   runApp(const App());
 }
 
@@ -32,4 +34,8 @@ class App extends StatelessWidget {
       },
     );
   }
+}
+
+initialControllers() {
+  Get.put(ForgotPasswordController(), permanent: true);
 }
