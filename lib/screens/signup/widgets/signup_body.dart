@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:tradino_flutter/global/constant/text_styles.dart';
 import 'package:tradino_flutter/global/widgets/back_text_widget.dart';
 import 'package:tradino_flutter/global/widgets/button_widget.dart';
+import 'package:tradino_flutter/global/widgets/inputs_controller_widget.dart';
 import 'package:tradino_flutter/global/widgets/inputs_widget.dart';
 import 'package:tradino_flutter/screens/signup/signup_controller.dart';
 import 'package:tradino_flutter/screens/signup/widgets/privacy_policy.dart';
@@ -15,6 +16,7 @@ class SignupBodyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final SignupController controller = Get.find();
+    final InputControllerWidget inputController = Get.find();
 
     return Expanded(
       flex: 5,
@@ -46,6 +48,7 @@ class SignupBodyWidget extends StatelessWidget {
                 radius: 8.0.r,
                 inputHeight: 36.0.h,
                 obscureText: false,
+                isPasswordVisible: inputController.isFirstPasswordVisible,
               ),
               SizedBox(height: 12.0.h),
               InputWidget(
@@ -56,6 +59,7 @@ class SignupBodyWidget extends StatelessWidget {
                 inputHeight: 36.0.h,
                 keyboardType: TextInputType.emailAddress,
                 obscureText: false,
+                isPasswordVisible: inputController.isFirstPasswordVisible,
               ),
               SizedBox(height: 12.0.h),
               InputWidget(
@@ -65,6 +69,7 @@ class SignupBodyWidget extends StatelessWidget {
                 radius: 8.0.r,
                 inputHeight: 36.0.h,
                 obscureText: true,
+                isPasswordVisible: inputController.isFirstPasswordVisible,
               ),
               SizedBox(height: 20.0.h),
               const PrivacyPolicyCheckBoxWidget(),

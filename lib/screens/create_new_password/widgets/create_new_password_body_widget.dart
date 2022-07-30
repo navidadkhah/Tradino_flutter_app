@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tradino_flutter/global/constant/colors.dart';
 import 'package:tradino_flutter/global/constant/text_styles.dart';
 import 'package:tradino_flutter/global/widgets/button_widget.dart';
+import 'package:tradino_flutter/global/widgets/inputs_controller_widget.dart';
 import 'package:tradino_flutter/global/widgets/inputs_widget.dart';
 import 'package:tradino_flutter/screens/create_new_password/create_new_password_controller.dart';
 
@@ -13,6 +14,7 @@ class CreateNewPasswordBodyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final CreateNewPasswordController controller = Get.find();
+    final InputControllerWidget inputController = Get.find();
 
     return Expanded(
       flex: 5,
@@ -47,6 +49,8 @@ class CreateNewPasswordBodyWidget extends StatelessWidget {
                 radius: 8.0.r,
                 inputHeight: 36.0.h,
                 obscureText: true,
+                isPasswordVisible: inputController.isFirstPasswordVisible,
+                passwordName: "isPasswordVisible",
               ),
               SizedBox(height: 20.0.h),
               InputWidget(
@@ -56,6 +60,8 @@ class CreateNewPasswordBodyWidget extends StatelessWidget {
                 radius: 8.0.r,
                 inputHeight: 36.0.h,
                 obscureText: true,
+                isPasswordVisible: inputController.isSecondPasswordVisible,
+                passwordName: "isPassword2Visible",
               ),
               SizedBox(height: 64.0.h),
               ButtonWidget(

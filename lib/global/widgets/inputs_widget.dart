@@ -16,6 +16,8 @@ class InputWidget extends StatelessWidget {
     this.keyboardType,
     this.textInputAction,
     this.textEditingController,
+    this.isPasswordVisible,
+    this.passwordName,
   }) : super(key: key);
 
   final String title;
@@ -25,6 +27,8 @@ class InputWidget extends StatelessWidget {
   final TextInputType? keyboardType;
   final TextInputAction? textInputAction;
   final TextEditingController? textEditingController;
+  final RxBool? isPasswordVisible;
+  final String? passwordName;
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +52,7 @@ class InputWidget extends StatelessWidget {
           ),
           child: Obx(
             () {
-              final isVisible = controller.isPasswordVisible.value;
+              final isVisible = isPasswordVisible!.value;
 
               return TextField(
                 textAlignVertical: TextAlignVertical.top,
@@ -64,10 +68,14 @@ class InputWidget extends StatelessWidget {
                   suffixIcon: obscureText
                       ? IconButton(
                           onPressed: () {
-                            controller.togglePassword1Visible();
+                            controller.togglePassword1Visible(
+                                passwordName.toString());
                           },
                           icon: isVisible
-                              ? const Icon(Icons.visibility_off)
+                              ? const Icon(
+                                  Icons.visibility_off,
+                                  color: kCharcoal,
+                                )
                               : const Icon(Icons.visibility),
                         )
                       : null,
