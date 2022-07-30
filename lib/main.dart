@@ -27,7 +27,7 @@ class App extends StatelessWidget {
           title: 'Tradiono App',
           debugShowCheckedModeBanner: false,
           getPages: Routes.pages,
-          initialRoute: Routes.kLogin,
+          initialRoute: Routes.kOpeningScreen,
           theme: ThemeData(
             scaffoldBackgroundColor: kCultured,
             primaryColor: kCharcoal,

@@ -5,6 +5,8 @@ import 'package:tradino_flutter/screens/forgot_password/forgot_password_bindings
 import 'package:tradino_flutter/screens/forgot_password/forgot_password_screen.dart';
 import 'package:tradino_flutter/screens/login/login_bindings.dart';
 import 'package:tradino_flutter/screens/login/login_screen.dart';
+import 'package:tradino_flutter/screens/opening_screen/opening_screen_bindings.dart';
+import 'package:tradino_flutter/screens/opening_screen/opening_screen_screen.dart';
 import 'package:tradino_flutter/screens/privacy/privacy_screen.dart';
 import 'package:tradino_flutter/screens/signup/signup_bindings.dart';
 import 'package:tradino_flutter/screens/signup/signup_screen.dart';
@@ -18,6 +20,7 @@ class Routes {
   static const kForgotPassword = '/forgotpassword';
   static const kVerifyEmail = '/verifyemail';
   static const kCreateNewPassword = '/createnewpassword';
+  static const kOpeningScreen = '/openingscreen';
 
   static final pages = [
     GetPage(
@@ -49,6 +52,11 @@ class Routes {
       name: kCreateNewPassword,
       page: () => const CreateNewPasswordScreen(),
       binding: CreateNewPasswordBindings(),
+    ),
+    GetPage(
+      name: kOpeningScreen,
+      page: () => const OpeningScreenScreen(),
+      binding: OpeningScreenBindings(),
     ),
   ];
 }
