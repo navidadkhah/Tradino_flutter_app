@@ -12,6 +12,7 @@ class ButtonWidget extends StatelessWidget {
     this.width,
     this.height,
     this.radius,
+    this.boxShadow,
   }) : super(key: key);
 
   final double? width;
@@ -19,6 +20,7 @@ class ButtonWidget extends StatelessWidget {
   final String title;
   final Function() onTap;
   final double? radius;
+  final BoxShadow? boxShadow;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +34,7 @@ class ButtonWidget extends StatelessWidget {
             gradient: kGreenLinearLeftToRight,
             borderRadius: BorderRadius.circular(radius ?? 24.0.r),
             boxShadow: [
-              kButtonWidgetShadow1,
+              boxShadow ?? kButtonWidgetShadow1,
               kButtonWidgetShadow2,
             ],
           ),

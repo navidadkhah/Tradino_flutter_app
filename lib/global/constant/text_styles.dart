@@ -8,6 +8,12 @@ final kBoldCharcoal56 = TextStyle(
   fontSize: 56.sp,
 );
 
+final kSemiBoldLinear24 = TextStyle(
+  fontWeight: FontWeight.w600,
+  foreground: Paint()..shader = linearGradient,
+  fontSize: 24.sp,
+);
+
 final kSemiBoldLinear40 = TextStyle(
   fontWeight: FontWeight.w600,
   foreground: Paint()..shader = linearGradient,
