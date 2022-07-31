@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 const kCultured = Color(0xfff6f6f6);
 const kWhite = Color(0xFFFFFFFF);
 const kGhostWhite = Color(0xFFFFFEFA);
+const kLightSilver = Color(0xFFD9D9D9);
 const kBlack = Color(0xFF000000);
 const kYankeesBlue = Color(0x161b1d3b);
 const kEerieBlack = Color(0xFF161B1D);
