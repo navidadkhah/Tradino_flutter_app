@@ -14,6 +14,12 @@ final kSemiBoldLinear24 = TextStyle(
   fontSize: 24.sp,
 );
 
+final kSemiBoldLinear14 = TextStyle(
+  fontWeight: FontWeight.w600,
+  foreground: Paint()..shader = linearGradient,
+  fontSize: 14.sp,
+);
+
 final kSemiBoldLinear40 = TextStyle(
   fontWeight: FontWeight.w600,
   foreground: Paint()..shader = linearGradient,
@@ -38,6 +44,12 @@ final kSemiBoldBlack24 = TextStyle(
   fontSize: 24.sp,
 );
 
+final kSemiBoldCharcoal16 = TextStyle(
+  fontWeight: FontWeight.w600,
+  color: kCharcoal,
+  fontSize: 16.sp,
+);
+
 final kSemiBoldRoyalBlue16 = TextStyle(
   fontWeight: FontWeight.w600,
   color: kRoyalBlue,
@@ -48,6 +60,12 @@ final kNormalCharcoal36 = TextStyle(
   fontWeight: FontWeight.w400,
   color: kCharcoal,
   fontSize: 36.sp,
+);
+
+final kNormalBlack20 = TextStyle(
+  fontWeight: FontWeight.w400,
+  color: kBlack,
+  fontSize: 20.sp,
 );
 
 final kNormalBlack18 = TextStyle(

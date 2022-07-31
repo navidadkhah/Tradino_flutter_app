@@ -13,6 +13,7 @@ class ButtonWidget extends StatelessWidget {
     this.height,
     this.radius,
     this.boxShadow,
+    this.textStyle,
   }) : super(key: key);
 
   final double? width;
@@ -21,6 +22,7 @@ class ButtonWidget extends StatelessWidget {
   final Function() onTap;
   final double? radius;
   final BoxShadow? boxShadow;
+  final TextStyle? textStyle;
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +49,7 @@ class ButtonWidget extends StatelessWidget {
               child: Center(
                 child: Text(
                   title,
-                  style: kSemiBoldCharcoal24,
+                  style: textStyle ?? kSemiBoldCharcoal24,
                 ),
               ),
             ),
