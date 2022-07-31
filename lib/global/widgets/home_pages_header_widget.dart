@@ -13,29 +13,30 @@ class HomePagesHeaderWidget extends StatelessWidget {
   }) : super(key: key);
 
   final Icon icon;
-  final ButtonWidget? buttonWidget;
   final bool hasButton;
+  final ButtonWidget? buttonWidget;
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 20.0.h, horizontal: 12.0.w),
+        padding: EdgeInsets.symmetric(vertical: 16.0.h, horizontal: 12.0.w),
         child: Column(
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 ShaderMask(
                   child: SizedBox(
                     child: IconButton(
-                      onPressed: null, //TODO: fix it in next faze
+                      alignment: Alignment.topLeft,
+                      iconSize: 40.0.sp,
+                      onPressed: () {}, // TODO: fix it in next faze
                       icon: icon,
                     ),
                   ),
-                  shaderCallback: (Rect bounds) {
-                    final Rect rect = Rect.fromLTRB(0, 0, 40, 40);
+                  shaderCallback: (_) {
+                    final Rect rect = Rect.fromLTRB(0, 0, 40.0.w, 40.0.h);
                     return kGreenLinearTopToBottom.createShader(rect);
                   },
                 ),
@@ -46,17 +47,18 @@ class HomePagesHeaderWidget extends StatelessWidget {
                 ShaderMask(
                   child: SizedBox(
                     child: IconButton(
-                      onPressed: null, // //TODO: fix it in next faze
+                      iconSize: 40.0.sp,
+                      onPressed: () {}, // TODO: fix it in next faze
                       icon: Icon(
                         Icons.account_circle_outlined,
-                        color: kAquamarine,
+                        color: kWhite,
                         size: 40.0.sp,
                       ),
                     ),
                   ),
-                  shaderCallback: (Rect bounds) {
-                    final Rect rect = Rect.fromLTRB(0, 0, 40.0.w, 40.0.h);
-                    return kGreenLinearTopToBottom.createShader(rect);
+                  shaderCallback: (_) {
+                    final Rect rect = Rect.fromLTRB(0, 0, 50.0.w, 40.0.h);
+                    return kGreenLinearLeftToRight.createShader(rect);
                   },
                 ),
               ],

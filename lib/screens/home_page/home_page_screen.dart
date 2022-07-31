@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tradino_flutter/global/constant/colors.dart';
 import 'package:tradino_flutter/global/constant/shadows.dart';
@@ -18,14 +16,13 @@ class HomePageScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             HomePagesHeaderWidget(
               icon: Icon(
                 Icons.search,
                 size: 40.0.sp,
-                color: Colors.white,
+                color: kWhite,
               ),
               buttonWidget: ButtonWidget(
                 title: "Auto Analyse with A.I.",
