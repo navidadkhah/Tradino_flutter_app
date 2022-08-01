@@ -1,4 +1,5 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
+import 'package:tradino_flutter/screens/login/login_bindings.dart';
 import 'package:tradino_flutter/screens/login/login_screen.dart';
 import 'package:tradino_flutter/screens/privacy/privacy_screen.dart';
 import 'package:tradino_flutter/screens/signup/signup_bindings.dart';

@@ -8,14 +8,15 @@ final kSemiBoldLinear40 = TextStyle(
   fontSize: 40.sp,
 );
 
-final kSemiBoldGrayBlack32 = TextStyle(
+final kSemiBoldCharcoal32 = TextStyle(
   fontWeight: FontWeight.w600,
-  color: kGrayBlack,
+  color: kCharcoal,
   fontSize: 32.sp,
 );
-
-final kSemiBoldGreyBlack22 = kSemiBoldGrayBlack32.copyWith(
-  fontSize: 22.0.sp,
+final kSemiBoldCharcoal24 = TextStyle(
+  fontWeight: FontWeight.w600,
+  color: kCharcoal,
+  fontSize: 24.sp,
 );
 
 final kNormalBlack14 = TextStyle(
@@ -24,14 +25,26 @@ final kNormalBlack14 = TextStyle(
   fontSize: 14.sp,
 );
 
-final kNormalGrayBlack14 = TextStyle(
+final kNormalBlack18 = TextStyle(
   fontWeight: FontWeight.w400,
-  color: kGrayBlack,
+  color: kBlack,
+  fontSize: 18.sp,
+);
+
+final kNormalCharcoal14 = TextStyle(
+  fontWeight: FontWeight.w400,
+  color: kCharcoal,
   fontSize: 14.sp,
 );
 
-final kNormalBlue14 = TextStyle(
+final kNormalRoyalBlue14 = TextStyle(
   fontWeight: FontWeight.w400,
-  color: kBlue,
+  color: kRoyalBlue,
   fontSize: 14.sp,
+);
+
+final kNormalCharcoal36 = TextStyle(
+  fontWeight: FontWeight.w400,
+  color: kCharcoal,
+  fontSize: 36.sp,
 );

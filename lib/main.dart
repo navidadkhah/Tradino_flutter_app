@@ -22,10 +22,10 @@ class App extends StatelessWidget {
           title: 'Tradiono App',
           debugShowCheckedModeBanner: false,
           getPages: Routes.pages,
-          initialRoute: Routes.kSignup,
+          initialRoute: Routes.kLogin,
           theme: ThemeData(
-            scaffoldBackgroundColor: kWhiteGray,
-            primaryColor: kGrayBlack,
+            scaffoldBackgroundColor: kCultured,
+            primaryColor: kCharcoal,
             fontFamily: "OpenSans",
           ),
         );

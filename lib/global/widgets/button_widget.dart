@@ -22,29 +22,32 @@ class ButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: width,
       height: height,
-      decoration: BoxDecoration(
-        gradient: kGreenLinear,
-        borderRadius: BorderRadius.circular(radius ?? 24.0.r),
-        boxShadow: [
-          kButtonWidgetShadow1,
-          kButtonWidgetShadow2,
-        ],
-      ),
       child: Material(
         borderRadius: BorderRadius.circular(radius ?? 24.0.r),
-        color: Colors.transparent,
-        child: InkWell(
-          borderRadius: BorderRadius.circular(radius ?? 24.0.r),
-          splashColor:
-              const Color(0xFF94FFA6), // TODO: update me based on color
-          onTap: onTap,
-          child: Center(
-            child: Text(
-              title,
-              style: kSemiBoldGreyBlack22,
+        child: Container(
+          decoration: BoxDecoration(
+            gradient: kGreenLinear,
+            borderRadius: BorderRadius.circular(radius ?? 24.0.r),
+            boxShadow: [
+              kButtonWidgetShadow1,
+              kButtonWidgetShadow2,
+            ],
+          ),
+          child: Material(
+            type: MaterialType.transparency,
+            child: InkWell(
+              borderRadius: BorderRadius.circular(radius ?? 24.0.r),
+              splashColor: kMintGreen,
+              onTap: onTap,
+              child: Center(
+                child: Text(
+                  title,
+                  style: kSemiBoldCharcoal24,
+                ),
+              ),
             ),
           ),
         ),

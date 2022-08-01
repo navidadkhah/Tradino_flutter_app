@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:tradino_flutter/global/constant/colors.dart';
+import 'package:tradino_flutter/global/widgets/tradino_header_widget.dart';
+import 'package:tradino_flutter/screens/login/widgets/login_body.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -8,8 +9,17 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text("Login"),
+      backgroundColor: kCharcoal,
+      body: SafeArea(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: const [
+            TradinoHeaderWidget(),
+            LoginBodyWidget(),
+          ],
+        ),
       ),
     );
   }
