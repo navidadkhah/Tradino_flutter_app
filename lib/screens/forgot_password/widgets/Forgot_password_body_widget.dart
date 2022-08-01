@@ -1,10 +1,11 @@
+import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
 import 'package:tradino_flutter/global/constant/colors.dart';
 import 'package:tradino_flutter/global/constant/text_styles.dart';
 import 'package:tradino_flutter/global/widgets/back_text_widget.dart';
 import 'package:tradino_flutter/global/widgets/button_widget.dart';
+import 'package:tradino_flutter/global/widgets/inputs_controller_widget.dart';
 import 'package:tradino_flutter/global/widgets/inputs_widget.dart';
 import 'package:tradino_flutter/screens/forgot_password/forgot_password_controller.dart';
 
@@ -14,6 +15,7 @@ class ForgotPasswordBodyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final ForgotPasswordController controller = Get.find();
+    final InputControllerWidget inputController = Get.find();
 
     return Expanded(
       flex: 5,
@@ -59,6 +61,7 @@ class ForgotPasswordBodyWidget extends StatelessWidget {
                 radius: 8.0.r,
                 inputHeight: 36.0.h,
                 obscureText: false,
+                isPasswordVisible: inputController.isFirstPasswordVisible,
               ),
               SizedBox(height: 128.0.h),
               ButtonWidget(

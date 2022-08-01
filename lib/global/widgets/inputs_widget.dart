@@ -1,6 +1,6 @@
+import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
 import 'package:tradino_flutter/global/constant/colors.dart';
 import 'package:tradino_flutter/global/constant/shadows.dart';
 import 'package:tradino_flutter/global/constant/text_styles.dart';
@@ -8,36 +8,41 @@ import 'package:tradino_flutter/global/widgets/inputs_controller_widget.dart';
 
 class InputWidget extends StatelessWidget {
   const InputWidget({
+    Key? key,
     required this.title,
+    required this.obscureText,
     this.inputHeight,
     this.radius,
-    required this.obscureText,
-    Key? key,
     this.keyboardType,
-    this.suffix,
     this.textInputAction,
     this.textEditingController,
+    this.isPasswordVisible,
+    this.passwordName,
   }) : super(key: key);
 
   final String title;
+  final bool obscureText;
   final double? inputHeight;
   final double? radius;
-  final bool obscureText;
   final TextInputType? keyboardType;
-  final Widget? suffix;
   final TextInputAction? textInputAction;
   final TextEditingController? textEditingController;
+  final RxBool? isPasswordVisible;
+  final String? passwordName;
 
   @override
   Widget build(BuildContext context) {
-    final InputControllerWidget controller = Get.put(InputControllerWidget());
+    final InputControllerWidget controller = Get.find();
 
     return Column(
       mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(title, style: kNormalBlack14),
+        Text(
+          title,
+          style: kNormalBlack14,
+        ),
         SizedBox(height: 4.0.h),
         Container(
           height: inputHeight ?? 46.0.h,
@@ -47,9 +52,10 @@ class InputWidget extends StatelessWidget {
           ),
           child: Obx(
             () {
-              final isVisible = controller.isPasswordVisible.value;
+              final isVisible = isPasswordVisible!.value;
 
               return TextField(
+                textAlignVertical: TextAlignVertical.top,
                 obscureText: obscureText
                     ? isVisible
                         ? false
@@ -60,23 +66,18 @@ class InputWidget extends StatelessWidget {
                 textInputAction: textInputAction,
                 decoration: InputDecoration(
                   suffixIcon: obscureText
-                      ? isVisible
-                          ? IconButton(
-                              onPressed: () {
-                                controller.togglePasswordVisible();
-                              },
-                              icon: const Icon(
-                                Icons.visibility_off,
-                              ),
-                            )
-                          : IconButton(
-                              onPressed: () {
-                                controller.togglePasswordVisible();
-                              },
-                              icon: const Icon(
-                                Icons.visibility,
-                              ),
-                            )
+                      ? IconButton(
+                          onPressed: () {
+                            controller.togglePassword1Visible(
+                                passwordName.toString());
+                          },
+                          icon: isVisible
+                              ? const Icon(
+                                  Icons.visibility_off,
+                                  color: kCharcoal,
+                                )
+                              : const Icon(Icons.visibility),
+                        )
                       : null,
                   border: InputBorder.none,
                   fillColor: kWhite,

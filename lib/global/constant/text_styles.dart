@@ -2,6 +2,12 @@ import 'colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+final kBoldCharcoal56 = TextStyle(
+  fontWeight: FontWeight.w700,
+  color: kCharcoal,
+  fontSize: 56.sp,
+);
+
 final kSemiBoldLinear40 = TextStyle(
   fontWeight: FontWeight.w600,
   foreground: Paint()..shader = linearGradient,
