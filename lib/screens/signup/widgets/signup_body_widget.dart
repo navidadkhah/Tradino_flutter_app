@@ -60,7 +60,9 @@ class SignupBodyWidget extends StatelessWidget {
                 width: double.infinity,
                 height: 52.0.h,
                 title: "Sign Up",
-                onTap: () {},
+                onTap: () {
+                  Get.toNamed("/verifyemail", arguments: '/signup');
+                },
               ),
               SizedBox(height: 24.0.h),
               const Center(

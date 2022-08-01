@@ -3,17 +3,18 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tradino_flutter/global/constant/colors.dart';
 import 'package:tradino_flutter/global/constant/text_styles.dart';
-import 'package:tradino_flutter/global/widgets/back_text_widget.dart';
 import 'package:tradino_flutter/global/widgets/button_widget.dart';
-import 'package:tradino_flutter/global/widgets/inputs_widget.dart';
 import 'package:tradino_flutter/screens/forgot_password/forgot_password_controller.dart';
+import 'package:tradino_flutter/screens/signup/signup_controller.dart';
+import 'package:tradino_flutter/screens/verify_email/widgets/pinput_widget.dart';
 
-class ForgotPasswordBodyWidget extends StatelessWidget {
-  const ForgotPasswordBodyWidget({Key? key}) : super(key: key);
+class VerifyEmailBodyWidget extends StatelessWidget {
+  const VerifyEmailBodyWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final ForgotPasswordController controller = Get.find();
+    final ForgotPasswordController forgotPasswordController = Get.find();
+    final SignupController signupController = Get.find();
 
     return Expanded(
       flex: 5,
@@ -30,10 +31,10 @@ class ForgotPasswordBodyWidget extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(height: 24.0.h),
+              SizedBox(height: 36.0.h),
               Text(
-                "Forgot your password ?",
-                style: kSemiBoldCharcoal24,
+                "Verification your email !",
+                style: kSemiBoldBlack24,
               ),
               SizedBox(height: 24.0.h),
               Column(
@@ -41,42 +42,41 @@ class ForgotPasswordBodyWidget extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
-                    "Please Enter your email address to",
+                    "Please Enter The Code Send to",
                     style: kNormalBlack14,
                   ),
                   Text(
-                    "resieve a verification code",
+                    Get.arguments == '/signup'
+                        ? signupController.emailTextController.text
+                        : forgotPasswordController.emailTextController.text,
                     style: kNormalBlack14,
                   )
                 ],
               ),
-              SizedBox(height: 32.0.h),
-              InputWidget(
-                title: "Email",
-                textEditingController: controller.emailTextController,
-                textInputAction: TextInputAction.done,
-                keyboardType: TextInputType.emailAddress,
-                radius: 8.0.r,
-                inputHeight: 36.0.h,
-                obscureText: false,
+              SizedBox(
+                height: 24.0.h,
               ),
-              SizedBox(height: 128.0.h),
+              const PinputWidget(),
+              SizedBox(height: 36.0.h),
+              TextButton(
+                onPressed: () {},
+                child: Text(
+                  "Resend code",
+                  style: kSemiBoldRoyalBlue16,
+                ),
+              ),
+              SizedBox(height: 40.0.h),
               ButtonWidget(
                 width: double.infinity,
                 height: 52.0.h,
-                title: "Send",
+                title: "Verify",
                 onTap: () {
-                  Get.toNamed('/verifyemail', arguments: '/forgotpassword');
+                  Get.arguments == '/signup'
+                      ? null // TODO: go to home page
+                      : Get.offAllNamed('/createnewpassword');
                 },
-                // TODO: tap to send a verification email and go to
-                // verification email page
               ),
               SizedBox(height: 12.0.h),
-              const BackTextWidget(
-                title: "Remember password ?",
-                pageName: "Login",
-                getName: "/login",
-              ),
             ],
           ),
         ),
