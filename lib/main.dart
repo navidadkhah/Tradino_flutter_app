@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:tradino_flutter/global/constant/colors.dart';
+import 'global/constant/routes.dart';
 
 void main() {
   runApp(const App());
@@ -9,24 +13,23 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'Tradino App',
-      home: HelloWorldPage(),
-    );
-  }
-}
-
-class HelloWorldPage extends StatelessWidget {
-  const HelloWorldPage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return const SafeArea(
-      child: Scaffold(
-        body: Center(
-          child: Text("Hello Tradino"),
-        ),
-      ),
+    return ScreenUtilInit(
+      designSize: const Size(390, 898),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (_, child) {
+        return GetMaterialApp(
+          title: 'Tradiono App',
+          debugShowCheckedModeBanner: false,
+          getPages: Routes.pages,
+          initialRoute: Routes.kSignup,
+          theme: ThemeData(
+            scaffoldBackgroundColor: kWhiteGray,
+            primaryColor: kGrayBlack,
+            fontFamily: "OpenSans",
+          ),
+        );
+      },
     );
   }
 }
