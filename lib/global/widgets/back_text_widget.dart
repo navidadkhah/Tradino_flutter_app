@@ -5,16 +5,25 @@ import 'package:get/get.dart';
 import 'package:tradino_flutter/global/constant/colors.dart';
 import 'package:tradino_flutter/global/constant/text_styles.dart';
 
-class BackToSignupWidget extends StatelessWidget {
-  const BackToSignupWidget({Key? key}) : super(key: key);
+class BackTextWidget extends StatelessWidget {
+  const BackTextWidget({
+    Key? key,
+    required this.title,
+    required this.pageName,
+    required this.getName,
+  }) : super(key: key);
+  final String title;
+  final String pageName;
+  final String getName;
 
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       mainAxisSize: MainAxisSize.min,
       children: [
         Text(
-          "Dont have an account?",
+          title,
           style: kNormalBlack14,
         ),
         TextButton(
@@ -22,11 +31,11 @@ class BackToSignupWidget extends StatelessWidget {
             textStyle: kNormalRoyalBlue14,
           ),
           onPressed: () {
-            Get.offAllNamed("/signup");
+            Get.offAllNamed(getName);
           },
-          child: const Text(
-            'sign up',
-            style: TextStyle(
+          child: Text(
+            pageName,
+            style: const TextStyle(
               color: kRoyalBlue,
             ),
           ),

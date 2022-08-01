@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tradino_flutter/global/constant/text_styles.dart';
+import 'package:tradino_flutter/global/widgets/back_text_widget.dart';
 import 'package:tradino_flutter/global/widgets/button_widget.dart';
 import 'package:tradino_flutter/global/widgets/input_widget.dart';
 import 'package:tradino_flutter/screens/signup/signup_controller.dart';
-import 'package:tradino_flutter/screens/signup/widgets/back_to_signin.dart';
-import 'package:tradino_flutter/screens/signup/widgets/privacy_policy_check_box_widget.dart';
+import 'package:tradino_flutter/screens/signup/widgets/privacy_policy.dart';
 import '../../../global/constant/colors.dart';
 
 class SignupBodyWidget extends StatelessWidget {
@@ -55,18 +55,20 @@ class SignupBodyWidget extends StatelessWidget {
               ),
               SizedBox(height: 32.0.h),
               const PrivacyPolicyCheckBoxWidget(),
-              SizedBox(height: 32.0.h),
-              Center(
-                child: ButtonWidget(
-                  width: double.infinity,
-                  height: 52.0.h,
-                  title: "Sign Up",
-                  onTap: () {},
-                ),
+              SizedBox(height: 20.0.h),
+              ButtonWidget(
+                width: double.infinity,
+                height: 52.0.h,
+                title: "Sign Up",
+                onTap: () {},
               ),
               SizedBox(height: 24.0.h),
               const Center(
-                child: BackToSignInWidget(),
+                child: BackTextWidget(
+                  title: "Already have an account ?",
+                  pageName: "sign in",
+                  getName: "/login",
+                ),
               ),
             ],
           ),
