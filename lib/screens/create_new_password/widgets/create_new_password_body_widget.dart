@@ -68,7 +68,9 @@ class CreateNewPasswordBodyWidget extends StatelessWidget {
                 width: double.infinity,
                 height: 52.0.h,
                 title: "Save",
-                onTap: () {},
+                onTap: () {
+                  Get.offAllNamed("/homepage");
+                },
               ),
             ],
           ),

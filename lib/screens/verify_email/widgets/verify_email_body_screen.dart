@@ -72,7 +72,7 @@ class VerifyEmailBodyWidget extends StatelessWidget {
                 title: "Verify",
                 onTap: () {
                   Get.arguments == '/signup'
-                      ? null // TODO: go to home page
+                      ? Get.offAllNamed("/homepage")
                       : Get.offAllNamed('/createnewpassword');
                 },
               ),
